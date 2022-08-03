@@ -2,12 +2,35 @@ const transition = document.querySelector(".transition");
 const optionWrappers = document.querySelectorAll(".option-wrapper");
 const options = document.querySelectorAll(".option");
 const formTitle = document.querySelector(".form__title");
+const backOffPage = document.querySelector(".go-back");
+let previousPageData = "courses";
 
+backOffPage.addEventListener("click", () => {
+  setTimeout(() => {
+    handlePageTransition();
+    optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+
+    setTimeout(() => {
+      Array.from(optionWrappers)
+        .find((wrapper) => wrapper.dataset.site === previousPageData)
+        .classList.add("active");
+      if (previousPageData === "korepetycje-z-informatyki") {
+        previousPageData = "courses";
+      }
+      if (previousPageData === "kurs-maturalny") {
+        previousPageData = "courses";
+      }
+      if (previousPageData === "mature-zdaje") {
+        previousPageData = "kurs-maturalny";
+      }
+      setTimeout(() => {
+        options.forEach((option) => option.classList.remove("move-out"));
+      }, 1);
+    }, 500);
+  }, 700);
+});
 window.onload = () => {
   transition.classList.add("inactive");
-  // Array.from(optionWrappers)
-  //   .find((option) => option.dataset.site === "courses")
-  //   .classList.add("active");
 };
 
 function handlePageTransition() {
@@ -19,6 +42,9 @@ function handlePageTransition() {
 function handlerFormTitle() {
   options.forEach((option) => {
     option.addEventListener("click", () => {
+      previousPageData = option.dataset.previous;
+
+      console.log(previousPageData);
       switch (option.dataset.form) {
         case "korepetycje":
           formTitle.textContent = "KURS INDYWIDUALNY";

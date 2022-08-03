@@ -17,18 +17,18 @@
     <div class="content">
 
         <div class="transition"></div>
-
+        <button class="go-back">Poprzednia Strona</button>
         <!-- PIERWSZY WYBOR -->
         <div class="option-wrapper active" data-site="courses">
-            <div data-choice="korepetycje-z-informatyki" class="option">
+            <div data-choice="korepetycje-z-informatyki" class="option" data-previous="courses">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Korepetycje z informatyki i programowania</p>
             </div>
-            <div data-choice="kurs-maturalny" class="option">
+            <div data-choice="kurs-maturalny" data-previous="courses" class="option">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Kurs maturalny z informatyki rozszerzonej </p>
             </div>
-            <div data-choice="textarea-formularz" class="option">
+            <div data-choice="textarea-formularz" data-previous="courses" class="option">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Inne</p>
             </div>
@@ -36,15 +36,18 @@
 
         <!-- SCIEZKA LEWA -->
         <div class="option-wrapper" data-site="korepetycje-z-informatyki">
-            <div class="option" data-choice="zwykly-formularz" data-form="korepetycje">
+            <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
+                data-previous="korepetycje-z-informatyki">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Potrzebuję pomocy z bieżącymi zadaniami ze szkoły/uczelni</p>
             </div>
-            <div class="option" data-choice="zwykly-formularz" data-form="korepetycje">
+            <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
+                data-previous="korepetycje-z-informatyki">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Przygotowanie do egzaminu, konkursu lub olimpiady</p>
             </div>
-            <div class="option" data-choice="zwykly-formularz" data-form="korepetycje">
+            <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
+                data-previous="korepetycje-z-informatyki">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Rozwijanie zainteresowania związanego z informatyką i programowaniem</p>
             </div>
@@ -53,15 +56,16 @@
         <!-- SCIEZKA ŚRODKOWA -->
         <!-- PIERWSZE ROZWIDLENIE -->
         <div class="option-wrapper" data-site="kurs-maturalny">
-            <div class="option" data-choice="zwykly-formularz" data-form="sam-na-sam">
+            <div class="option" data-choice="zwykly-formularz" data-form="sam-na-sam" data-previous="kurs-maturalny">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Wolę pracować sam na sam z korepetytorem</p>
             </div>
-            <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa">
+            <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa" data-previous="kurs-maturalny">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Wolę pracować w kameralnej grupie</p>
             </div>
-            <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu">
+            <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu"
+                data-previous="kurs-maturalny">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Wolę pracować samodzielnie w domu</p>
             </div>
@@ -69,11 +73,11 @@
 
         <!-- DRUGIE ROZWIDLENIE  ŚRODEK-->
         <div class="option-wrapper" data-site="mature-zdaje">
-            <div class="option" data-choice="zwykly-formularz">
+            <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Maturę zdaję w roku 2023</p>
             </div>
-            <div class="option" data-choice="zwykly-formularz">
+            <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
                 <i class="bi bi-emoji-smile"></i>
                 <p>Maturę zdaję w roku 2024 lub później</p>
             </div>

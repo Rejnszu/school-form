@@ -18,7 +18,7 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 1rem;
+  margin: 1rem 0 2rem 0;
   color: black;
 }
 
@@ -105,42 +105,6 @@ h2 {
   margin-top: 1.5rem;
 }
 
-@media (max-width: 800px) {
-  .option-wrapper {
-    position: absolute;
-    width: 80%;
-    max-width: 95%;
-    top: 10%;
-    left: 10%;
-    display: flex;
-    justify-content: center;
-    transform: translate(-50%, 0%);
-    z-index: 0;
-    opacity: 0;
-    pointer-events: none;
-    flex-wrap: wrap;
-    gap: 2rem;
-    transition: all 1s;
-  }
-  .option-wrapper.active {
-    pointer-events: all;
-    opacity: 1;
-    z-index: 10;
-    transform: translate(0%, 0%);
-  }
-  .option-wrapper__form {
-    justify-content: center;
-    width: 90%;
-    left: 5%;
-  }
-  .option {
-    padding: 1rem;
-  }
-  .option.move-out {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}
 .form {
   min-width: none;
   background-color: rgba(249, 244, 244, 0.27);
@@ -179,4 +143,63 @@ h2 {
 }
 .form button:hover {
   background-color: var(--main-color-darker);
+}
+
+.go-back {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  z-index: 130;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-color);
+}
+.go-back:hover {
+  background-color: var(--main-color-darker);
+}
+
+@media (max-width: 800px) {
+  .option-wrapper {
+    position: absolute;
+    width: 80%;
+    max-width: 95%;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, 0%);
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+    transition: all 1s;
+  }
+  .option-wrapper.active {
+    pointer-events: all;
+    opacity: 1;
+    z-index: 10;
+    transform: translate(0%, 0%);
+  }
+  .option-wrapper__form {
+    justify-content: center;
+    width: 90%;
+    left: 5%;
+  }
+  .option {
+    padding: 1rem;
+  }
+  .option.move-out {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .go-back {
+    top: -2%;
+  }
 }/*# sourceMappingURL=styles.css.map */
