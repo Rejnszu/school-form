@@ -129,9 +129,35 @@ h2 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.additional-information {
+  position: absolute;
+  top: -200px;
+  left: 7px;
+  padding: 1rem;
+  cursor: auto;
+  max-width: 250px;
+  text-align: left;
+  transform: translateX(-200%);
+  opacity: 0;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s, transform 1s;
+}
+.additional-information.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.additional-information__handler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 300;
+  font-size: 3rem !important;
+}
+
 .badge {
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: -10px;
   font-size: clamp(0.5rem, 3vw, 1rem);
   width: auto;
@@ -144,7 +170,7 @@ h2 {
   position: absolute;
   content: "";
   background-color: var(--main-color-darker);
-  bottom: -10px;
+  bottom: -9px;
   left: 0;
   width: 10px;
   height: 10px;
@@ -298,5 +324,9 @@ input[type=number] {
   }
   .go-back {
     top: -2%;
+  }
+  .additional-information,
+.additional-information__handler {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

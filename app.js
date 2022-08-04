@@ -3,6 +3,13 @@ const optionWrappers = document.querySelectorAll(".option-wrapper");
 const options = document.querySelectorAll(".option");
 const formTitle = document.querySelector(".form__title");
 const backOffPage = document.querySelector(".go-back");
+const additionalInformationHandler = document.querySelectorAll(
+  ".additional-information__handler"
+);
+const additionalInformations = document.querySelectorAll(
+  ".additional-information"
+);
+
 let previousPageData = "courses";
 
 window.onload = () => {
@@ -67,7 +74,17 @@ function handlerFormTitle() {
 
 options.forEach((option) => {
   option.addEventListener("click", (e) => {
+    if (
+      e.target === option.querySelector(".additional-information__handler") ||
+      e.target === option.querySelector(".additional-information")
+    ) {
+      return;
+    }
+
     handlerFormTitle();
+    additionalInformations.forEach((information) =>
+      information.classList.remove("active")
+    );
     Array.from(options).forEach((option) => option.classList.add("move-out"));
     option.classList.remove("move-out");
     setTimeout(() => {
@@ -86,14 +103,11 @@ options.forEach((option) => {
   });
 });
 
-// const moreInformationHandler = document.querySelectorAll(".more-info");
-// const informations = document.querySelectorAll(".test__span");
-
-// moreInformationHandler.forEach((informationHandler) => {
-//   informationHandler.addEventListener("click", () => {
-//     informations.forEach((information) => {
-//       information.classList.remove("active");
-//     });
-//     informationHandler.nextElementSibling.classList.add("active");
-//   });
-// });
+additionalInformationHandler.forEach((handler) => {
+  handler.addEventListener("click", () => {
+    additionalInformations.forEach((information) =>
+      information.classList.remove("active")
+    );
+    handler.nextElementSibling.classList.add("active");
+  });
+});
