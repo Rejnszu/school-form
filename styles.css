@@ -16,11 +16,28 @@ body {
   height: 90vh;
 }
 
+.h1-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   text-align: center;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem auto;
   font-weight: 800;
+  padding: 0 1rem;
   color: black;
+  position: relative;
+  display: inline-block;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15%;
+  height: 130%;
+  width: 6px;
+  background-color: var(--main-color);
 }
 
 h2 {
@@ -158,7 +175,7 @@ h2 {
   z-index: 130;
   transform: translateX(-50%);
   margin-top: 1rem;
-  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
   padding: 0.3rem 0.8rem;
   border-radius: 10px;
   transition: all 0.5s;
