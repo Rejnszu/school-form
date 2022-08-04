@@ -39,6 +39,7 @@ h2 {
   max-width: 90%;
   text-transform: uppercase;
   font-weight: 600;
+
   font-size: clamp(0.7rem, 5vw, 1.5rem);
 }
 .content {
@@ -90,12 +91,13 @@ h2 {
   justify-content: center;
 }
 .option {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: auto;
   width: 17rem;
   transition: 0.5s;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   font-weight: 500;
   background-color: white;
   text-align: center;
@@ -120,6 +122,42 @@ h2 {
   }
 }
 
+.badge {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  width: auto;
+  height: auto;
+  padding: 0.2rem 1.5rem;
+  // clip-path: polygon(100% 0%, 92% 53%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  background-color: var(--main-color);
+  color: white;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: var(--main-color-darker);
+    bottom: -10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    top: 50%;
+    right: -1px;
+    width: 15px;
+    height: 30px;
+    transform: translateY(-50%);
+
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  }
+}
+
 .form {
   min-width: none;
   background-color: rgba(249, 244, 244, 0.27);
@@ -132,23 +170,32 @@ h2 {
   width: 600px;
   max-width: 95%;
   box-shadow: 8px -8px 0px var(--main-color);
+  & p {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
   & label {
     margin: 0.5rem 0;
     font-weight: 900;
   }
   & input,
   & textarea {
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px;
     width: 300px;
     max-width: 100%;
     margin: 0.5rem 0;
     font-size: 16px;
     border-radius: 8px;
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      outline: none;
+    }
   }
   & button {
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     padding: 0.5rem 1rem;
     border-radius: 10px;
     border: none;
@@ -159,6 +206,31 @@ h2 {
       background-color: var(--main-color-darker);
     }
   }
+}
+.rodo {
+  display: flex;
+  align-self: flex-start;
+  & input {
+    display: inline;
+    max-width: 30px;
+  }
+  & p {
+    font-weight: 400;
+    font-size: 1rem;
+    & a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--main-color);
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .go-back {
@@ -181,7 +253,7 @@ h2 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .option-wrapper {
     position: absolute;
     width: 80%;
@@ -211,7 +283,7 @@ h2 {
     left: 5%;
   }
   .option {
-    padding: 1rem;
+    padding: 2rem 1rem;
     &.move-out {
       transform: translateX(-100%);
       opacity: 0;

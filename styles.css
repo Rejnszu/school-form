@@ -98,12 +98,13 @@ h2 {
 }
 
 .option {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: auto;
   width: 17rem;
   transition: 0.5s;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   font-weight: 500;
   background-color: white;
   text-align: center;
@@ -128,6 +129,41 @@ h2 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.badge {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  width: auto;
+  height: auto;
+  padding: 0.2rem 1.5rem;
+  background-color: var(--main-color);
+  color: white;
+}
+.badge::before {
+  position: absolute;
+  content: "";
+  background-color: var(--main-color-darker);
+  bottom: -10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.badge::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  top: 50%;
+  right: -1px;
+  width: 15px;
+  height: 30px;
+  transform: translateY(-50%);
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
 .form {
   min-width: none;
   background-color: rgba(249, 244, 244, 0.27);
@@ -141,12 +177,17 @@ h2 {
   max-width: 95%;
   box-shadow: 8px -8px 0px var(--main-color);
 }
+.form p {
+  font-size: clamp(0.8rem, 4vw, 1.2rem);
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
 .form label {
   margin: 0.5rem 0;
   font-weight: 900;
 }
 .form input, .form textarea {
-  border: 1px solid rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
   width: 300px;
   max-width: 100%;
@@ -154,9 +195,13 @@ h2 {
   font-size: 16px;
   border-radius: 8px;
 }
+.form input:focus, .form textarea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: none;
+}
 .form button {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   padding: 0.5rem 1rem;
   border-radius: 10px;
   border: none;
@@ -166,6 +211,34 @@ h2 {
 }
 .form button:hover {
   background-color: var(--main-color-darker);
+}
+
+.rodo {
+  display: flex;
+  align-self: flex-start;
+}
+.rodo input {
+  display: inline;
+  max-width: 30px;
+}
+.rodo p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.rodo p a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .go-back {
@@ -188,7 +261,7 @@ h2 {
   background-color: var(--main-color-darker);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .option-wrapper {
     position: absolute;
     width: 80%;
@@ -217,7 +290,7 @@ h2 {
     left: 5%;
   }
   .option {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   .option.move-out {
     transform: translateX(-100%);

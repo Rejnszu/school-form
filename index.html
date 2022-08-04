@@ -22,6 +22,7 @@
         <!-- PIERWSZY WYBOR -->
         <div class="option-wrapper active" data-site="courses">
             <div data-choice="korepetycje-z-informatyki" class="option" data-previous="courses">
+
                 <i class="bi bi-emoji-smile"></i>
                 <p>Korepetycje z informatyki i programowania</p>
             </div>
@@ -62,11 +63,13 @@
                 <p>Wolę pracować sam na sam z korepetytorem</p>
             </div>
             <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa" data-previous="kurs-maturalny">
+                <span class="badge">Najczęściej wybierany</span>
                 <i class="bi bi-emoji-smile"></i>
                 <p>Wolę pracować w kameralnej grupie</p>
             </div>
             <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu"
                 data-previous="kurs-maturalny">
+                <span class="badge">Nowość!</span>
                 <i class="bi bi-emoji-smile"></i>
                 <p>Wolę pracować samodzielnie w domu</p>
             </div>
@@ -88,13 +91,19 @@
         <div class="option-wrapper option-wrapper__form" data-site="textarea-formularz">
             <form class="form">
                 <label for="textarea">Jakie kursu szukasz?</label>
-                <textarea id="textarea" rows="7" cols="10"></textarea>
+                <textarea id="textarea" rows="5" cols="10"></textarea>
+                <p>Zostaw numer oddzownimy z ofertą!</p>
                 <label for="name">Imie i Nazwisko</label>
                 <input type="text" id="name">
                 <label for="mail">Mail</label>
                 <input type="email" id="mail">
                 <label for="number">Numer telefonu</label>
-                <input type="number" id="number"><button type="submit">Wyślij</button>
+                <input type="number" id="number">
+                <div class="rodo"><input type="checkbox" required>
+                    <p>Zaakceptuj <a href="" target="_blank">RODO</a></p>
+                </div>
+
+                <button type="submit">Wyślij</button>
             </form>
         </div>
 
@@ -102,13 +111,16 @@
             <form class="form">
                 <p>Sugerujemy:</p>
                 <h2 class="form__title"></h2>
-                <p>Zostaw numer oddzownimy!</p>
+                <p>Zostaw numer oddzownimy z ofertą!</p>
                 <label for="name">Imie i Nazwisko</label>
                 <input type="text" id="name">
                 <label for="mail">Mail</label>
                 <input type="email" id="mail">
                 <label for="number">Numer telefonu</label>
                 <input type="number" id="number">
+                <div class="rodo"><input type="checkbox" required>
+                    <p>Zaakceptuj <a href="" target="_blank">RODO</a></p>
+                </div>
                 <button type="submit">Wyślij</button>
             </form>
         </div>
