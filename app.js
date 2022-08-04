@@ -5,7 +5,12 @@ const formTitle = document.querySelector(".form__title");
 const backOffPage = document.querySelector(".go-back");
 let previousPageData = "courses";
 
+window.onload = () => {
+  transition.classList.add("inactive");
+};
+
 backOffPage.addEventListener("click", () => {
+  backOffPage.setAttribute("disabled", true);
   setTimeout(() => {
     handlePageTransition();
     optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
@@ -25,13 +30,11 @@ backOffPage.addEventListener("click", () => {
       }
       setTimeout(() => {
         options.forEach((option) => option.classList.remove("move-out"));
+        backOffPage.removeAttribute("disabled");
       }, 1);
     }, 500);
   }, 700);
 });
-window.onload = () => {
-  transition.classList.add("inactive");
-};
 
 function handlePageTransition() {
   transition.classList.remove("inactive");
@@ -44,7 +47,6 @@ function handlerFormTitle() {
     option.addEventListener("click", () => {
       previousPageData = option.dataset.previous;
 
-      console.log(previousPageData);
       switch (option.dataset.form) {
         case "korepetycje":
           formTitle.textContent = "KURS INDYWIDUALNY";
@@ -66,9 +68,8 @@ function handlerFormTitle() {
 options.forEach((option) => {
   option.addEventListener("click", (e) => {
     handlerFormTitle();
-    Array.from(options)
-      .filter((option) => option !== e.target)
-      .forEach((option) => option.classList.add("move-out"));
+    Array.from(options).forEach((option) => option.classList.add("move-out"));
+    option.classList.remove("move-out");
     setTimeout(() => {
       handlePageTransition();
       optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
