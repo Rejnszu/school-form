@@ -54,7 +54,9 @@ function handlePageTransition() {
 function handlerFormTitle() {
   options.forEach((option) => {
     option.addEventListener("click", () => {
-      previousPageData = option.dataset.previous;
+      (function handlePreviousSite() {
+        previousPageData = option.dataset.previous;
+      })();
 
       switch (option.dataset.form) {
         case "korepetycje":
@@ -70,13 +72,13 @@ function handlerFormTitle() {
           formTitle.textContent = "KURS GRUPOWY AMBITNY";
           formWorkTime.textContent = "90 minut / tydzień";
           formDescription.textContent =
-            "Praca domowa po każdych zajęciach Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu.          Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej";
+            "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej";
           break;
         case "samodzielnie-w-domu":
           formTitle.textContent = "AMBITNY KURS WYKŁADOWY";
           formWorkTime.textContent = "120 minut / tydzień";
           formDescription.textContent =
-            "Praca domowa po każdych zajęciach Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu.          Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej.";
+            "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej.";
           break;
       }
     });
