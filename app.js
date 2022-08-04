@@ -2,6 +2,8 @@ const transition = document.querySelector(".transition");
 const optionWrappers = document.querySelectorAll(".option-wrapper");
 const options = document.querySelectorAll(".option");
 const formTitle = document.querySelector(".form__title");
+const formDescription = document.querySelector(".form__description");
+const formWorkTime = document.querySelector(".form__time");
 const backOffPage = document.querySelector(".go-back");
 const additionalInformationHandler = document.querySelectorAll(
   ".additional-information__handler"
@@ -60,12 +62,21 @@ function handlerFormTitle() {
           break;
         case "sam-na-sam":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY";
+          formWorkTime.textContent = "60 minut / tydzień ";
+          formDescription.textContent =
+            "Praca domowa po każdych zajęciach Materiały podstawowe w cenie kursu Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej";
           break;
         case "kameralna-grupa":
           formTitle.textContent = "KURS GRUPOWY AMBITNY";
+          formWorkTime.textContent = "90 minut / tydzień";
+          formDescription.textContent =
+            "Praca domowa po każdych zajęciach Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu.          Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej";
           break;
         case "samodzielnie-w-domu":
           formTitle.textContent = "AMBITNY KURS WYKŁADOWY";
+          formWorkTime.textContent = "120 minut / tydzień";
+          formDescription.textContent =
+            "Praca domowa po każdych zajęciach Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu.          Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej.";
           break;
       }
     });

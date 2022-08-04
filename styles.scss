@@ -231,6 +231,16 @@ h2 {
     }
   }
 }
+.form__description {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+.form__time {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin: 0.5rem 0;
+  align-self: center;
+}
 .rodo {
   display: flex;
   align-self: flex-start;
