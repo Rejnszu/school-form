@@ -5,6 +5,8 @@ const formTitle = document.querySelector(".form__title");
 const formDescription = document.querySelector(".form__description");
 const formWorkTime = document.querySelector(".form__time");
 const backOffPage = document.querySelector(".go-back");
+const coursesDiv = document.querySelector('[data-site="courses"]');
+
 const additionalInformationHandler = document.querySelectorAll(
   ".additional-information__handler"
 );
@@ -17,6 +19,14 @@ let previousPageData = "courses";
 window.onload = () => {
   transition.classList.add("inactive");
 };
+
+function checkIfReverseButtonIsDisplayed() {
+  if (coursesDiv.classList.contains("active")) {
+    backOffPage.classList.add("inactive");
+  } else {
+    backOffPage.classList.remove("inactive");
+  }
+}
 
 backOffPage.addEventListener("click", () => {
   backOffPage.setAttribute("disabled", true);
@@ -40,6 +50,7 @@ backOffPage.addEventListener("click", () => {
       setTimeout(() => {
         options.forEach((option) => option.classList.remove("move-out"));
         backOffPage.removeAttribute("disabled");
+        checkIfReverseButtonIsDisplayed();
       }, 1);
     }, 500);
   }, 700);
@@ -53,11 +64,14 @@ function handlePageTransition() {
 }
 function handlerFormTitle() {
   options.forEach((option) => {
-    option.addEventListener("click", () => {
-      (function handlePreviousSite() {
-        previousPageData = option.dataset.previous;
-      })();
-
+    option.addEventListener("click", (e) => {
+      if (
+        e.target === option.querySelector(".additional-information__handler") ||
+        e.target === option.querySelector(".additional-information")
+      ) {
+        return;
+      }
+      previousPageData = option.dataset.previous;
       switch (option.dataset.form) {
         case "korepetycje":
           formTitle.textContent = "KURS INDYWIDUALNY";
@@ -108,6 +122,7 @@ options.forEach((option) => {
         Array.from(optionWrappers)
           .find((wrapper) => wrapper.dataset.site === option.dataset.choice)
           .classList.add("active");
+        checkIfReverseButtonIsDisplayed();
         setTimeout(() => {
           options.forEach((option) => option.classList.remove("move-out"));
         }, 1);
@@ -118,9 +133,9 @@ options.forEach((option) => {
 
 additionalInformationHandler.forEach((handler) => {
   handler.addEventListener("click", () => {
-    additionalInformations.forEach((information) =>
-      information.classList.remove("active")
-    );
-    handler.nextElementSibling.classList.add("active");
+    // additionalInformations.forEach((information) =>
+    //   information.classList.remove("active")
+    // );
+    handler.nextElementSibling.classList.toggle("active");
   });
 });

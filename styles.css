@@ -138,13 +138,13 @@ h2 {
   max-width: 250px;
   text-align: left;
   pointer-events: none;
-  transform: translateX(-200%);
+  transform: scale(0);
   opacity: 0;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.5s, transform 1s;
+  transition: opacity 0.5s, transform 0.7s;
 }
 .additional-information.active {
-  transform: translateX(0);
+  transform: scale(1);
   opacity: 1;
   pointer-events: all;
 }
@@ -295,10 +295,15 @@ input[type=number] {
   border: none;
   cursor: pointer;
   color: white;
+  opacity: 1;
   background-color: var(--main-color);
 }
 .go-back:hover {
   background-color: var(--main-color-darker);
+}
+.go-back.inactive {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 1100px) {
