@@ -38,6 +38,7 @@ backOffPage.addEventListener("click", () => {
       Array.from(optionWrappers)
         .find((wrapper) => wrapper.dataset.site === previousPageData)
         .classList.add("active");
+
       if (previousPageData === "korepetycje-z-informatyki") {
         previousPageData = "courses";
       }
@@ -62,7 +63,7 @@ function handlePageTransition() {
     transition.classList.add("inactive");
   }, 600);
 }
-function handlerFormTitle() {
+function FormHandler() {
   options.forEach((option) => {
     option.addEventListener("click", (e) => {
       if (
@@ -108,7 +109,7 @@ options.forEach((option) => {
       return;
     }
 
-    handlerFormTitle();
+    FormHandler();
     additionalInformations.forEach((information) =>
       information.classList.remove("active")
     );

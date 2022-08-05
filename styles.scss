@@ -132,6 +132,7 @@ h2 {
   pointer-events: none;
   transform: scale(0);
   opacity: 0;
+  background-color: white;
   box-shadow: 0px 5px 15px rgb(0 0 0 / 30%);
   transition: opacity 0.5s, transform 0.7s;
   &.active {
@@ -335,8 +336,15 @@ input[type="number"] {
   .go-back {
     top: -2%;
   }
-  .additional-information,
-  .additional-information__handler {
-    display: none;
+  .additional-information {
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    width: 250px;
+    // box-shadow: 0 0 0 40px rgba(0, 0, 0, 0.212);
+    transform: translate(-50%, -50%) scale(0);
+    &.active {
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }
