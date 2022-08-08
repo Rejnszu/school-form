@@ -48,6 +48,9 @@ backOffPage.addEventListener("click", () => {
       if (previousPageData === "mature-zdaje") {
         previousPageData = "kurs-maturalny";
       }
+      if (previousPageData === "kurs-ambitny") {
+        previousPageData = "kurs-maturalny";
+      }
       setTimeout(() => {
         options.forEach((option) => option.classList.remove("move-out"));
         backOffPage.removeAttribute("disabled");
@@ -82,6 +85,12 @@ function FormHandler() {
           formWorkTime.textContent = "60 minut / tydzień ";
           formDescription.textContent =
             "Praca domowa po każdych zajęciach Materiały podstawowe w cenie kursu Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej";
+          break;
+        case "sam-na-sam-plus":
+          formTitle.textContent = "KURS INDYWIDUALNY AMBITNY PLUS";
+          formWorkTime.textContent = "120 minut / tydzień ";
+          formDescription.textContent =
+            "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych. Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami. Dostęp do prywatnej grupy szkolnej.";
           break;
         case "kameralna-grupa":
           formTitle.textContent = "KURS GRUPOWY AMBITNY";
@@ -134,9 +143,6 @@ options.forEach((option) => {
 
 additionalInformationHandler.forEach((handler) => {
   handler.addEventListener("click", () => {
-    // additionalInformations.forEach((information) =>
-    //   information.classList.remove("active")
-    // );
     handler.nextElementSibling.classList.toggle("active");
   });
 });
