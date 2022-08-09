@@ -123,6 +123,7 @@ h2 {
   & i {
     font-size: clamp(3rem, 5vw, 4rem);
     align-self: center;
+
     color: var(--main-color);
   }
   & p {
@@ -156,7 +157,7 @@ h2 {
 .additional-information__handler {
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 20px;
 
   z-index: 300;
   transform: translateX(-50%);

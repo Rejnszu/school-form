@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <script src="app.js" defer></script>
     <title>Formularz Szkolny</title>
 </head>
@@ -17,7 +18,7 @@
     </div>
     <div class="content">
 
-        <!-- <div class="transition"></div> -->
+
         <button class="go-back inactive">Poprzednia Strona</button>
         <!-- PIERWSZY WYBOR -->
         <div class="option-wrapper " data-site="courses">
@@ -26,19 +27,19 @@
                 <span class="additional-information">Bieżąca pomoc w szkole lub na studiach.
                     Przygotowania do zaliczeń, konkursów, olimpiad.
                     Rozwijanie zainteresowań.</span>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="bi bi-pc-display-horizontal"></i>
                 <p>Korepetycje z informatyki i programowania</p>
             </div>
 
             <div data-choice="kurs-maturalny" data-previous="courses" class="option">
                 <button class="additional-information__handler">Więcej informacji</button>
                 <span class="additional-information">Pełne przygotowanie do rozszerzonej matury z informatyki.</span>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-graduation-cap"></i>
                 <p>Kurs maturalny z informatyki rozszerzonej </p>
             </div>
 
             <div data-choice="textarea-formularz" data-previous="courses" class="option">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-bookmark"></i>
                 <p>Inne</p>
             </div>
         </div>
@@ -47,13 +48,13 @@
         <div class="option-wrapper" data-site="korepetycje-z-informatyki">
             <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
                 data-previous="korepetycje-z-informatyki">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-hand-holding-hand"></i>
                 <p>Potrzebuję pomocy z bieżącymi zadaniami ze szkoły/uczelni</p>
             </div>
 
             <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
                 data-previous="korepetycje-z-informatyki">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-brands fa-leanpub"></i>
                 <p>Przygotowanie do egzaminu, konkursu lub olimpiady</p>
             </div>
 
@@ -63,7 +64,7 @@
                 <span class="additional-information">Nauka wybranego języka programowania,
                     frameworku, technologii itp.
                     Rozwijanie zainteresowania informatyką.</span>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-arrow-trend-up"></i>
                 <p>Rozwijanie zainteresowania związanego z informatyką i programowaniem</p>
             </div>
         </div>
@@ -75,7 +76,7 @@
                 <button class="additional-information__handler">Więcej informacji</button>
                 <span class="additional-information">Regularne zajęcia na żywo sam na sam z
                     korepetytorem o ustalonej porze.</span>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-people-arrows"></i>
                 <p>Wolę pracować sam na sam z korepetytorem</p>
             </div>
             <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa" data-previous="kurs-maturalny">
@@ -84,7 +85,7 @@
                     osobowej). Wzajemna motywacja i wsparcie
                     przez cały okres trwania kursu.</span>
                 <span class="badge">Najczęściej wybierany</span>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-people-group"></i>
                 <p>Wolę pracować w kameralnej grupie</p>
             </div>
             <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu"
@@ -94,29 +95,29 @@
                     wiedzę w swoim tempie, o dowolnej porze. Zajęcia w
                     większych grupach, nacisk na prace samodzielną w domu.</span>
                 <span class="badge">Nowość!</span>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fa-solid fa-person"></i>
                 <p>Wolę pracować samodzielnie w domu</p>
             </div>
         </div>
         <!-- PIERWSZE ROZWIDLENIE ŚRODEK, KURS AMBITNY I AMBITNY PLUS -->
         <div class="option-wrapper option-wrapper--two-options" data-site="kurs-ambitny">
             <div class="option" data-choice="zwykly-formularz" data-form="sam-na-sam" data-previous="kurs-ambitny">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="bi bi-layers-fill"></i>
                 <p>Kurs Indywidualny Ambitny</p>
             </div>
             <div class="option" data-choice="zwykly-formularz" data-form="sam-na-sam-plus" data-previous="kurs-ambitny">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="bi bi-stack"></i>
                 <p>Kurs Indywidualny Ambitny Plus</p>
             </div>
         </div>
         <!-- DRUGIE ROZWIDLENIE  ŚRODEK-->
         <div class="option-wrapper option-wrapper--two-options" data-site="mature-zdaje">
             <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="bi bi-calendar-minus"></i>
                 <p>Maturę zdaję w roku 2023</p>
             </div>
             <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="bi bi-calendar-plus"></i>
                 <p>Maturę zdaję w roku 2024 lub później</p>
             </div>
         </div>

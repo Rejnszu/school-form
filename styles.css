@@ -164,7 +164,7 @@ h2 {
 .additional-information__handler {
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 20px;
   z-index: 300;
   transform: translateX(-50%);
   font-size: clamp(0.6rem, 3vw, 1.2rem);

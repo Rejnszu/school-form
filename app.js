@@ -126,21 +126,19 @@ options.forEach((option) => {
     Array.from(options).forEach((option) => option.classList.add("move-out"));
     option.classList.remove("move-out");
     setTimeout(() => {
-      // handlePageTransition();
       option.parentElement.classList.remove("fade-in");
       option.parentElement.classList.add("fade-out");
-      // optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
 
       setTimeout(() => {
         Array.from(optionWrappers)
           .find((wrapper) => wrapper.dataset.site === option.dataset.choice)
           .classList.add("fade-in");
+
         checkIfReverseButtonIsDisplayed();
-        setTimeout(() => {
-          options.forEach((option) => option.classList.remove("move-out"));
-        }, 1);
+
+        options.forEach((option) => option.classList.remove("move-out"));
       }, 400);
-    }, 400);
+    }, 500);
   });
 });
 
