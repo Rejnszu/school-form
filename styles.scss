@@ -138,8 +138,9 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 30rem;
   padding: 4rem 2rem 2rem 2rem;
-  min-height: 30rem;
+  min-height: 35rem;
   & > i {
     position: absolute;
     right: 20px;
@@ -385,6 +386,7 @@ input[type="number"] {
   }
   .option--enhanced {
     padding: 3rem 1rem;
+    width: 25rem;
     & ul {
       list-style: none;
     }
@@ -451,13 +453,14 @@ input[type="number"] {
   .option--enhanced {
     padding: 3rem 1rem;
     width: 100%;
+    height: auto;
     & ul {
       list-style: none;
     }
   }
   .go-back {
     padding: 0.4rem 0.9rem;
-    top: -2%;
+    top: -1.5%;
     left: 60%;
     transform: translate(0);
   }
