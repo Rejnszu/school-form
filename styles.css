@@ -140,6 +140,35 @@ h2 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
+.option--enhanced {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4rem 2rem 2rem 2rem;
+  min-height: 30rem;
+}
+.option--enhanced > i {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.option--enhanced p {
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.option--enhanced hr {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+.option--enhanced ul {
+  list-style: none;
+  text-align: left;
+}
+.option--enhanced li {
+  padding: 0.5rem 0;
+  font-weight: 600;
+}
+
 .additional-information {
   position: absolute;
   top: -150px;
@@ -398,6 +427,9 @@ input[type=number] {
   }
   .option.move-out {
     opacity: 0;
+  }
+  .option--enhanced {
+    padding: 3rem 1rem;
   }
   .go-back {
     top: -1%;
