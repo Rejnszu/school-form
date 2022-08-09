@@ -17,11 +17,13 @@ const additionalInformations = document.querySelectorAll(
 let previousPageData = "courses";
 
 window.onload = () => {
-  transition.classList.add("inactive");
+  Array.from(optionWrappers)
+    .find((wrapper) => wrapper.dataset.site === "courses")
+    .classList.add("fade-in");
 };
 
 function checkIfReverseButtonIsDisplayed() {
-  if (coursesDiv.classList.contains("active")) {
+  if (coursesDiv.classList.contains("fade-in")) {
     backOffPage.classList.add("inactive");
   } else {
     backOffPage.classList.remove("inactive");
@@ -30,42 +32,41 @@ function checkIfReverseButtonIsDisplayed() {
 
 backOffPage.addEventListener("click", () => {
   backOffPage.setAttribute("disabled", true);
+  additionalInformations.forEach((information) =>
+    information.classList.remove("active")
+  );
+
+  Array.from(optionWrappers)
+    .find((optionWrapper) => optionWrapper.classList.contains("fade-in"))
+    .classList.remove("fade-in");
+
   setTimeout(() => {
-    handlePageTransition();
-    optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
-
+    Array.from(optionWrappers)
+      .find((wrapper) => wrapper.dataset.site === previousPageData)
+      .classList.add("fade-in");
+    Array.from(optionWrappers)
+      .find((wrapper) => wrapper.dataset.site === previousPageData)
+      .classList.remove("fade-out");
+    if (previousPageData === "korepetycje-z-informatyki") {
+      previousPageData = "courses";
+    }
+    if (previousPageData === "kurs-maturalny") {
+      previousPageData = "courses";
+    }
+    if (previousPageData === "mature-zdaje") {
+      previousPageData = "kurs-maturalny";
+    }
+    if (previousPageData === "kurs-ambitny") {
+      previousPageData = "kurs-maturalny";
+    }
     setTimeout(() => {
-      Array.from(optionWrappers)
-        .find((wrapper) => wrapper.dataset.site === previousPageData)
-        .classList.add("active");
-
-      if (previousPageData === "korepetycje-z-informatyki") {
-        previousPageData = "courses";
-      }
-      if (previousPageData === "kurs-maturalny") {
-        previousPageData = "courses";
-      }
-      if (previousPageData === "mature-zdaje") {
-        previousPageData = "kurs-maturalny";
-      }
-      if (previousPageData === "kurs-ambitny") {
-        previousPageData = "kurs-maturalny";
-      }
-      setTimeout(() => {
-        options.forEach((option) => option.classList.remove("move-out"));
-        backOffPage.removeAttribute("disabled");
-        checkIfReverseButtonIsDisplayed();
-      }, 1);
-    }, 500);
-  }, 700);
+      options.forEach((option) => option.classList.remove("move-out"));
+      backOffPage.removeAttribute("disabled");
+      checkIfReverseButtonIsDisplayed();
+    }, 1);
+  }, 300);
 });
 
-function handlePageTransition() {
-  transition.classList.remove("inactive");
-  setTimeout(() => {
-    transition.classList.add("inactive");
-  }, 600);
-}
 function FormHandler() {
   options.forEach((option) => {
     option.addEventListener("click", (e) => {
@@ -99,7 +100,7 @@ function FormHandler() {
             "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej";
           break;
         case "samodzielnie-w-domu":
-          formTitle.textContent = "AMBITNY KURS WYKŁADOWY";
+          formTitle.textContent = "KURS AMBITNY WYKŁADOWY";
           formWorkTime.textContent = "120 minut / tydzień";
           formDescription.textContent =
             "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej.";
@@ -125,19 +126,21 @@ options.forEach((option) => {
     Array.from(options).forEach((option) => option.classList.add("move-out"));
     option.classList.remove("move-out");
     setTimeout(() => {
-      handlePageTransition();
-      optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+      // handlePageTransition();
+      option.parentElement.classList.remove("fade-in");
+      option.parentElement.classList.add("fade-out");
+      // optionWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
 
       setTimeout(() => {
         Array.from(optionWrappers)
           .find((wrapper) => wrapper.dataset.site === option.dataset.choice)
-          .classList.add("active");
+          .classList.add("fade-in");
         checkIfReverseButtonIsDisplayed();
         setTimeout(() => {
           options.forEach((option) => option.classList.remove("move-out"));
         }, 1);
-      }, 500);
-    }, 700);
+      }, 400);
+    }, 400);
   });
 });
 
