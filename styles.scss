@@ -66,12 +66,12 @@ h2 {
 
 .option-wrapper {
   position: absolute;
-  width: 80%;
+  width: 90%;
   max-width: 95%;
   top: 50%;
   left: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   transform: translate(-50%, -100%);
   z-index: 0;
   opacity: 0;
@@ -80,37 +80,50 @@ h2 {
   gap: 5rem;
 
   transition: all 1s;
-  &.active {
+
+  &.fade-in {
     pointer-events: all;
     opacity: 1;
     z-index: 10;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -50%);
   }
+  &.fade-out {
+    pointer-events: none;
+    opacity: 0;
+    z-index: 0;
+    transform: translate(-50%, 40%);
+  }
+}
+.option-wrapper--two-options {
+  justify-content: space-around;
 }
 .option-wrapper__form {
   justify-content: center;
+  top: 40%;
 }
 .option {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 17rem;
+  justify-content: center;
+  width: 25rem;
+  min-height: 25rem;
   transition: 0.5s;
   padding: 2.5rem 2rem;
   font-weight: 500;
   background-color: white;
   text-align: center;
-  box-shadow: 0px 5px 15px rgb(0 0 0 / 8%);
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 30%);
   transition: all 0.5s;
   cursor: pointer;
   &.move-out {
-    transform: translateY(-100%);
+    // transform: translate(-100%);
     opacity: 0;
   }
   & i {
     font-size: clamp(3rem, 5vw, 4rem);
     align-self: center;
+
     color: var(--main-color);
   }
   & p {
@@ -118,13 +131,13 @@ h2 {
     margin-top: 1.5rem;
   }
   &:hover {
-    box-shadow: 0px 5px 15px rgb(0 0 0 / 30%);
+    box-shadow: 0px 5px 15px rgb(0 0 0 / 60%);
   }
 }
 .additional-information {
   position: absolute;
   top: -200px;
-  left: 7px;
+  left: 60px;
   padding: 1rem;
   cursor: auto;
   max-width: 250px;
@@ -143,11 +156,25 @@ h2 {
 }
 .additional-information__handler {
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 50%;
+  bottom: 20px;
 
   z-index: 300;
-  font-size: 3rem !important;
+  transform: translateX(-50%);
+
+  font-size: clamp(0.6rem, 3vw, 1.2rem);
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+
+  background-color: var(--main-color);
+  &:hover {
+    background-color: var(--main-color-darker);
+  }
 }
 .badge {
   position: absolute;
@@ -314,22 +341,30 @@ input[type="number"] {
     gap: 2rem;
 
     transition: all 1s;
-    &.active {
+    &.fade-in {
       pointer-events: all;
       opacity: 1;
       z-index: 10;
       transform: translate(0%, 0%);
     }
+    &.fade-out {
+      pointer-events: none;
+      opacity: 0;
+      z-index: 0;
+      transform: translate(50%, 0%);
+    }
   }
   .option-wrapper__form {
     justify-content: center;
-    width: 90%;
-    left: 5%;
+    width: 95%;
+    left: 2%;
   }
   .option {
-    padding: 2rem 1rem;
+    width: 17rem;
+    min-height: auto;
+    padding: 3rem 1rem;
     &.move-out {
-      transform: translateX(-100%);
+      // transform: translateX(-100%);
       opacity: 0;
     }
   }
