@@ -6,7 +6,8 @@ const formDescription = document.querySelector(".form__description");
 const formWorkTime = document.querySelector(".form__time");
 const backOffPage = document.querySelector(".go-back");
 const coursesDiv = document.querySelector('[data-site="courses"]');
-
+const currentStage = document.querySelector(".counter");
+let counter = 1;
 const additionalInformationHandler = document.querySelectorAll(
   ".additional-information__handler"
 );
@@ -63,6 +64,8 @@ backOffPage.addEventListener("click", () => {
       options.forEach((option) => option.classList.remove("move-out"));
       backOffPage.removeAttribute("disabled");
       checkIfReverseButtonIsDisplayed();
+      counter--;
+      currentStage.textContent = counter;
     }, 1);
   }, 300);
 });
@@ -137,6 +140,8 @@ options.forEach((option) => {
         checkIfReverseButtonIsDisplayed();
 
         options.forEach((option) => option.classList.remove("move-out"));
+        counter++;
+        currentStage.textContent = counter;
       }, 400);
     }, 500);
   });
