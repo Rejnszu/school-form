@@ -161,7 +161,7 @@ h2 {
   background-color: var(--main-color);
 }
 .option--enhanced ul {
-  list-style: none;
+  list-style: square;
   text-align: left;
 }
 .option--enhanced li {
@@ -393,6 +393,12 @@ input[type=number] {
   .option.move-out {
     opacity: 0;
   }
+  .option--enhanced {
+    padding: 3rem 1rem;
+  }
+  .option--enhanced ul {
+    list-style: none;
+  }
 }
 @media (max-width: 1100px) {
   .content {
@@ -449,8 +455,12 @@ input[type=number] {
     padding: 3rem 1rem;
     width: 100%;
   }
+  .option--enhanced ul {
+    list-style: none;
+  }
   .go-back {
-    top: -1%;
+    padding: 0.4rem 0.9rem;
+    top: -2%;
     left: 60%;
     transform: translate(0);
   }

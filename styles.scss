@@ -154,7 +154,7 @@ h2 {
     background-color: var(--main-color);
   }
   & ul {
-    list-style: none;
+    list-style: square;
     text-align: left;
   }
   & li {
@@ -383,6 +383,12 @@ input[type="number"] {
       opacity: 0;
     }
   }
+  .option--enhanced {
+    padding: 3rem 1rem;
+    & ul {
+      list-style: none;
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -440,9 +446,13 @@ input[type="number"] {
   .option--enhanced {
     padding: 3rem 1rem;
     width: 100%;
+    & ul {
+      list-style: none;
+    }
   }
   .go-back {
-    top: -1%;
+    padding: 0.4rem 0.9rem;
+    top: -2%;
     left: 60%;
     transform: translate(0);
   }
