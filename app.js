@@ -32,7 +32,7 @@ startSelectingCourses.addEventListener("click", () => {
       .classList.add("fade-in");
 
     startingPage.style.display = "none";
-  }, 600);
+  }, 300);
 });
 
 function checkIfReverseButtonIsDisplayed() {

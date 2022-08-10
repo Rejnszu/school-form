@@ -60,24 +60,64 @@ h2 {
   }
 }
 .starting-page {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-color: white;
-  display: flex;
-  row-gap: 5rem;
-  // justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: all 0.5s;
+  transition: all 0.3s;
+  background-image: url(/src/back-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::after {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.6782913849133403) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
   &.fade-out {
     opacity: 0;
   }
+}
+.starting-page__inner-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-left: clamp(1rem, 5vw, 5rem);
+  display: flex;
+
+  row-gap: clamp(2rem, 5vw, 5rem);
+  max-width: 90%;
+  transform: translateY(-20%);
+  padding-top: 10rem;
+  & h3 {
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 900;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  flex-direction: column;
+  & p {
+    font-weight: 700;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    // max-width: 60%;
+  }
   & button {
     background-color: var(--main-color);
-    font-size: clamp(0.6rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     padding: 0.3rem 0.8rem;
     border-radius: 10px;
     transition: all 0.5s;
+    margin: auto auto auto 0;
     border: none;
     cursor: pointer;
     color: white;
@@ -86,19 +126,12 @@ h2 {
     }
   }
 }
-// .img-holder {
-//   background-image: url(/src/startbackground.jpg);
-//   background-position: center;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   width: 100%;
-//   height: 100%;
-// }
+
 .courses-page {
   height: 100vh;
   display: none;
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.6s;
 
   &.fade-in {
     opacity: 1;
@@ -420,6 +453,7 @@ input[type="number"] {
   }
   & .counter {
     margin-left: 0.5rem;
+    margin-right: 0.5rem;
     font-size: clamp(1.2rem, 3vw, 2.5rem);
   }
 }
@@ -494,6 +528,7 @@ input[type="number"] {
   .option-wrapper--two-options {
     width: 90%;
     left: 5%;
+    padding-bottom: 30%;
   }
   .option {
     width: 17rem;
