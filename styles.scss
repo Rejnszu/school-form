@@ -50,9 +50,10 @@ h2 {
   background-color: white;
   display: flex;
   row-gap: 5rem;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all 0.5s;
   & button {
     background-color: var(--main-color);
     font-size: clamp(0.6rem, 3vw, 1.5rem);
@@ -66,6 +67,9 @@ h2 {
       background-color: var(--main-color-darker);
     }
   }
+  &.fade-out {
+    opacity: 0;
+  }
 }
 // .img-holder {
 //   background-image: url(/src/startbackground.jpg);
@@ -78,8 +82,14 @@ h2 {
 .courses-page {
   height: 100vh;
   display: none;
+  opacity: 0;
+  transition: all 0.5s;
   // overflow: hidden;
+  &.fade-in {
+    opacity: 1;
+  }
 }
+
 .content {
   position: relative;
   height: 100%;

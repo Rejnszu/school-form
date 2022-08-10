@@ -54,9 +54,9 @@ h2 {
   background-color: white;
   display: flex;
   row-gap: 5rem;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all 0.5s;
 }
 .starting-page button {
   background-color: var(--main-color);
@@ -71,10 +71,18 @@ h2 {
 .starting-page button:hover {
   background-color: var(--main-color-darker);
 }
+.starting-page.fade-out {
+  opacity: 0;
+}
 
 .courses-page {
   height: 100vh;
   display: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.courses-page.fade-in {
+  opacity: 1;
 }
 
 .content {

@@ -14,13 +14,16 @@ const startSelectingCourses = document.querySelector(
 );
 
 startSelectingCourses.addEventListener("click", () => {
-  startingPage.style.display = "none";
+  startingPage.classList.add("fade-out");
   coursesPage.style.display = "block";
   setTimeout(() => {
+    coursesPage.classList.add("fade-in");
     Array.from(optionWrappers)
       .find((wrapper) => wrapper.dataset.site === "courses")
       .classList.add("fade-in");
-  }, 100);
+
+    startingPage.style.display = "none";
+  }, 600);
 });
 let counter = 1;
 const additionalInformationHandler = document.querySelectorAll(
