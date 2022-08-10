@@ -12,6 +12,15 @@ const startingPage = document.querySelector(".starting-page");
 const startSelectingCourses = document.querySelector(
   ".start-selecting-courses"
 );
+const additionalInformationHandler = document.querySelectorAll(
+  ".additional-information__handler"
+);
+const additionalInformations = document.querySelectorAll(
+  ".additional-information"
+);
+
+let counter = 1;
+let previousPageData = "courses";
 
 startSelectingCourses.addEventListener("click", () => {
   startingPage.classList.add("fade-out");
@@ -25,21 +34,6 @@ startSelectingCourses.addEventListener("click", () => {
     startingPage.style.display = "none";
   }, 600);
 });
-let counter = 1;
-const additionalInformationHandler = document.querySelectorAll(
-  ".additional-information__handler"
-);
-const additionalInformations = document.querySelectorAll(
-  ".additional-information"
-);
-
-let previousPageData = "courses";
-
-// window.onload = () => {
-//   Array.from(optionWrappers)
-//     .find((wrapper) => wrapper.dataset.site === "courses")
-//     .classList.add("fade-in");
-// };
 
 function checkIfReverseButtonIsDisplayed() {
   if (coursesDiv.classList.contains("fade-in")) {
