@@ -7,6 +7,21 @@ const formWorkTime = document.querySelector(".form__time");
 const backOffPage = document.querySelector(".go-back");
 const coursesDiv = document.querySelector('[data-site="courses"]');
 const currentStage = document.querySelector(".counter");
+const coursesPage = document.querySelector(".courses-page");
+const startingPage = document.querySelector(".starting-page");
+const startSelectingCourses = document.querySelector(
+  ".start-selecting-courses"
+);
+
+startSelectingCourses.addEventListener("click", () => {
+  startingPage.style.display = "none";
+  coursesPage.style.display = "block";
+  setTimeout(() => {
+    Array.from(optionWrappers)
+      .find((wrapper) => wrapper.dataset.site === "courses")
+      .classList.add("fade-in");
+  }, 100);
+});
 let counter = 1;
 const additionalInformationHandler = document.querySelectorAll(
   ".additional-information__handler"
@@ -17,11 +32,11 @@ const additionalInformations = document.querySelectorAll(
 
 let previousPageData = "courses";
 
-window.onload = () => {
-  Array.from(optionWrappers)
-    .find((wrapper) => wrapper.dataset.site === "courses")
-    .classList.add("fade-in");
-};
+// window.onload = () => {
+//   Array.from(optionWrappers)
+//     .find((wrapper) => wrapper.dataset.site === "courses")
+//     .classList.add("fade-in");
+// };
 
 function checkIfReverseButtonIsDisplayed() {
   if (coursesDiv.classList.contains("fade-in")) {
@@ -142,7 +157,7 @@ options.forEach((option) => {
         options.forEach((option) => option.classList.remove("move-out"));
         counter++;
         currentStage.textContent = counter;
-      }, 400);
+      }, 500);
     }, 500);
   });
 });

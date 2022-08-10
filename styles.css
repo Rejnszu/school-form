@@ -13,7 +13,8 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  height: 90vh;
+  height: 110vh;
+  overflow: hidden;
 }
 
 .h1-wrapper {
@@ -47,27 +48,39 @@ h2 {
   font-size: clamp(0.7rem, 5vw, 1.5rem);
 }
 
+.starting-page {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  row-gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.starting-page button {
+  background-color: var(--main-color);
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.starting-page button:hover {
+  background-color: var(--main-color-darker);
+}
+
+.courses-page {
+  height: 100vh;
+  display: none;
+}
+
 .content {
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-.transition {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  z-index: 120;
-  opacity: 1;
-  transition: all 1s;
-}
-.transition.inactive {
-  z-index: -1;
-  opacity: 0;
-  background-color: white;
 }
 
 .option-wrapper {
@@ -90,7 +103,7 @@ h2 {
   pointer-events: all;
   opacity: 1;
   z-index: 10;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
 }
 .option-wrapper.fade-out {
   pointer-events: none;
@@ -105,7 +118,7 @@ h2 {
 
 .option-wrapper__form {
   justify-content: center;
-  top: 40%;
+  top: 45%;
 }
 
 .option {
@@ -115,13 +128,12 @@ h2 {
   justify-content: center;
   width: 25rem;
   min-height: 25rem;
-  transition: 0.5s;
+  transition: all 0.5s;
   padding: 2.5rem 2rem;
   font-weight: 500;
   background-color: white;
   text-align: center;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s;
   cursor: pointer;
 }
 .option.move-out {
@@ -337,7 +349,7 @@ input[type=number] {
 
 .go-back {
   position: absolute;
-  top: 85%;
+  top: 80%;
   left: 50%;
   z-index: 130;
   transform: translateX(-50%);
@@ -369,7 +381,7 @@ input[type=number] {
   color: black;
   position: relative;
   display: inline-block;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.1rem, 3vw, 2rem);
 }
 .kroki::before {
   content: "";
@@ -382,17 +394,20 @@ input[type=number] {
 }
 .kroki .counter {
   margin-left: 0.5rem;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
 }
 
 @media (max-width: 1550px) {
   .option {
-    width: 17rem;
+    width: 20rem;
     min-height: 25rem;
     padding: 1rem 1rem 3rem 1rem;
   }
   .option.move-out {
     opacity: 0;
+  }
+  .option-wrapper__form.fade-in {
+    transform: translate(-50%, -55%);
   }
   .option--enhanced {
     padding: 3rem 1rem;
@@ -402,7 +417,7 @@ input[type=number] {
     list-style: none;
   }
   .additional-information__handler {
-    font-size: clamp(0.6rem, 1.3vw, 1.2rem);
+    font-size: clamp(0.7rem, 1.3vw, 1.2rem);
   }
 }
 @media (max-width: 1100px) {
@@ -453,7 +468,7 @@ input[type=number] {
   .option {
     width: 17rem;
     min-height: auto;
-    padding: 3rem 1rem 3rem 1rem;
+    padding: 4rem 1rem 4rem 1rem;
   }
   .option.move-out {
     opacity: 0;
@@ -486,7 +501,7 @@ input[type=number] {
     transform: translate(-50%, -50%) scale(1);
   }
   .additional-information__handler {
-    bottom: 10px;
+    bottom: 15px;
   }
   .kroki {
     left: 40px;
