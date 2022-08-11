@@ -18,9 +18,58 @@ const additionalInformationHandler = document.querySelectorAll(
 const additionalInformations = document.querySelectorAll(
   ".additional-information"
 );
+const currentStageDescription = document.querySelector(".kroki__description");
 
 let counter = 1;
 let previousPageData = "courses";
+
+function currentStageDescriptionHandler(option) {
+  switch (option.dataset.choice) {
+    case "korepetycje-z-informatyki":
+      currentStageDescription.textContent = "W czym możemy ci pomóc?";
+      break;
+    case "zwykly-formularz":
+      currentStageDescription.textContent = "Skontaktuj się z nami.";
+      break;
+    case "textarea-formularz":
+      currentStageDescription.textContent = "Opisz jakiego kursu szukasz.";
+      break;
+    case "kurs-maturalny":
+      currentStageDescription.textContent = "Jaki tryb pracy ci pasuje?";
+      break;
+    case "kurs-ambitny":
+      currentStageDescription.textContent =
+        "Jaka intensywność kursu cię interesuje?";
+      break;
+    case "mature-zdaje":
+      currentStageDescription.textContent = "Kiedy zdajesz maturę?";
+      break;
+  }
+}
+function currentStageDescriptionReverse() {
+  const currentOptionsDataSite = Array.from(optionWrappers).find((wrapper) =>
+    wrapper.classList.contains("fade-in")
+  ).dataset.site;
+  switch (currentOptionsDataSite) {
+    case "courses":
+      currentStageDescription.textContent = "Jaki jest twój cel?";
+      break;
+
+    case "korepetycje-z-informatyki":
+      currentStageDescription.textContent = "W czym możemy ci pomóc?";
+      break;
+    case "kurs-maturalny":
+      currentStageDescription.textContent = "jaki tryb pracy ci pasuje?";
+      break;
+    case "mature-zdaje":
+      currentStageDescription.textContent = "Kiedy zdajesz maturę?";
+      break;
+    case "kurs-ambitny":
+      currentStageDescription.textContent =
+        "Jaka intensywność kursu cię interesuje?";
+      break;
+  }
+}
 
 startSelectingCourses.addEventListener("click", () => {
   startingPage.classList.add("fade-out");
@@ -76,13 +125,14 @@ backOffPage.addEventListener("click", () => {
       options.forEach((option) => option.classList.remove("move-out"));
       backOffPage.removeAttribute("disabled");
       checkIfReverseButtonIsDisplayed();
+      currentStageDescriptionReverse();
       counter--;
       currentStage.textContent = counter;
     }, 1);
   }, 300);
 });
 
-function FormHandler() {
+function formHandler() {
   options.forEach((option) => {
     option.addEventListener("click", (e) => {
       if (
@@ -134,7 +184,7 @@ options.forEach((option) => {
       return;
     }
 
-    FormHandler();
+    formHandler();
     additionalInformations.forEach((information) =>
       information.classList.remove("active")
     );
@@ -150,7 +200,7 @@ options.forEach((option) => {
           .classList.add("fade-in");
 
         checkIfReverseButtonIsDisplayed();
-
+        currentStageDescriptionHandler(option);
         options.forEach((option) => option.classList.remove("move-out"));
         counter++;
         currentStage.textContent = counter;

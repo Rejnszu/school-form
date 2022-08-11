@@ -21,7 +21,7 @@ body {
 }
 h1 {
   text-align: center;
-  margin: 1rem auto;
+  margin: 2rem auto 0.5rem auto;
   font-weight: 800;
   padding: 0 1rem;
   color: black;
@@ -235,13 +235,27 @@ h2 {
     background-color: var(--main-color);
   }
   & ul {
-    list-style: square;
+    list-style: none;
     text-align: left;
+    padding-left: 1rem;
     margin-bottom: 2rem;
   }
   & li {
+    position: relative;
     padding: 0.7rem 0;
     font-weight: 600;
+    &::before {
+      position: absolute;
+      content: "\f0da";
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: var(--main-color);
+
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
   }
 }
 .additional-information {
@@ -453,7 +467,7 @@ input[type="number"] {
   }
   & .counter {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     font-size: clamp(1.2rem, 3vw, 2.5rem);
   }
 }
@@ -474,9 +488,6 @@ input[type="number"] {
   .option--enhanced {
     padding: 3rem 1rem;
     width: 25rem;
-    & ul {
-      list-style: none;
-    }
   }
   .additional-information__handler {
     font-size: clamp(0.7rem, 1.3vw, 1.2rem);
