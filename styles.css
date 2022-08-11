@@ -175,7 +175,7 @@ h2 {
 
 .option-wrapper__form {
   justify-content: center;
-  top: 45%;
+  top: 50%;
 }
 
 .option {
@@ -341,14 +341,13 @@ h2 {
   width: 600px;
   max-width: 95%;
   box-shadow: 8px -8px 0px var(--main-color);
+  gap: 0.6rem;
 }
 .form p {
   font-size: clamp(0.8rem, 4vw, 1.2rem);
   font-weight: 600;
-  margin: 0.5rem 0;
 }
 .form label {
-  margin: 0.5rem 0;
   font-weight: 900;
 }
 .form input, .form textarea {
@@ -356,7 +355,6 @@ h2 {
   padding: 10px;
   width: 300px;
   max-width: 100%;
-  margin: 0.5rem 0;
   font-size: 16px;
   border-radius: 8px;
 }
@@ -365,7 +363,7 @@ h2 {
   outline: none;
 }
 .form button {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: clamp(1rem, 5vw, 1.5rem);
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -464,14 +462,15 @@ input[type=number] {
   background-color: var(--main-color);
 }
 .kroki .counter {
-  margin-left: 0.5rem;
+  color: var(--main-color);
+  margin-left: 1rem;
   margin-right: 1rem;
   font-size: clamp(1.2rem, 3vw, 2.5rem);
 }
 
 @media (max-width: 1550px) {
   .option {
-    width: 20rem;
+    width: 22rem;
     min-height: 25rem;
     padding: 1rem 1rem 3rem 1rem;
   }
@@ -553,8 +552,8 @@ input[type=number] {
   }
   .go-back {
     padding: 0.4rem 0.9rem;
-    top: 15px;
-    left: 60%;
+    top: -10px;
+    left: 35%;
     transform: translate(0);
   }
   .additional-information {
@@ -574,10 +573,7 @@ input[type=number] {
     bottom: 15px;
   }
   .kroki {
-    left: 40px;
-    top: 35px;
-  }
-  .kroki__description {
-    display: none;
+    left: 20px;
+    top: 45px;
   }
 }/*# sourceMappingURL=styles.css.map */
