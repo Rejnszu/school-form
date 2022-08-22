@@ -45,7 +45,7 @@ h2 {
   font-size: clamp(0.7rem, 5vw, 1.5rem);
 }
 .button {
-  font-size: clamp(0.6rem, 3vw, 1.5rem);
+  font-size: clamp(0.6rem, 3vw, 1.3rem);
   padding: 0.3rem 0.8rem;
   border-radius: 10px;
   transition: all 0.5s;
@@ -71,7 +71,7 @@ h2 {
   border-radius: 40px;
 
   & i {
-    font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
+    font-size: clamp(1.2rem, 3vw, 2rem) !important;
     color: white !important;
     margin-right: 0.5rem;
     padding-top: 2px;
@@ -308,8 +308,8 @@ h2 {
   z-index: 300;
   transform: translateX(-50%);
 
-  font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
-  padding: 0.4rem 0.7rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
+  padding: 0.4rem 0.6rem;
   border-radius: 50%;
   transition: all 0.5s;
   border: none;
@@ -632,7 +632,8 @@ input[type="number"] {
     }
   }
   .additional-information__handler {
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 0.5rem;
+    right: -10px;
   }
   .kroki {
     left: 50%;
