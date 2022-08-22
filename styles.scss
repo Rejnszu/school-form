@@ -302,8 +302,8 @@ h2 {
 }
 .additional-information__handler {
   position: absolute;
-  right: -15px;
-  top: 5px;
+  right: -5px;
+  top: 15px;
 
   z-index: 300;
   transform: translateX(-50%);
@@ -320,7 +320,7 @@ h2 {
 }
 .badge {
   position: absolute;
-  top: 8px;
+  top: 23px;
   left: -10px;
   font-size: clamp(0.5rem, 3vw, 1rem);
   width: auto;
@@ -633,7 +633,7 @@ input[type="number"] {
   }
   .additional-information__handler {
     padding: 0.4rem 0.55rem;
-    right: -10px;
+    right: -5px;
   }
   .kroki {
     left: 50%;
