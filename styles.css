@@ -58,6 +58,7 @@ h2 {
   color: white;
   opacity: 1;
   margin: auto auto 0 auto;
+  box-shadow: 0 2px 3px black;
   background-color: var(--main-color);
 }
 .button:hover {
@@ -67,15 +68,15 @@ h2 {
 .button--choose {
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  bottom: 25px;
   display: flex;
   align-items: center;
   transform: translateX(-50%);
-  padding: 0.3rem 0.9rem 0.1rem 0.2rem;
+  padding: 0.3rem 1rem 0.1rem 1rem;
   border-radius: 40px;
 }
 .button--choose i {
-  font-size: clamp(1rem, 3vw, 2.5rem) !important;
+  font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
   color: white !important;
   margin-right: 0.5rem;
 }
@@ -298,7 +299,6 @@ h2 {
   position: absolute;
   right: -15px;
   top: 5px;
-  border: 2px solid var(--main-color);
   z-index: 300;
   transform: translateX(-50%);
   font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
@@ -384,6 +384,7 @@ h2 {
   margin-top: 0.5rem;
   font-size: clamp(1rem, 5vw, 1.5rem);
   padding: 0.5rem 1rem;
+  box-shadow: 0 2px 3px black;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -441,7 +442,7 @@ input[type=number] {
   z-index: 130;
   transform: translateX(-50%);
   margin-top: 1rem;
-  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
   display: flex;
   align-items: center;
   border-radius: 50px;
@@ -600,6 +601,9 @@ input[type=number] {
   }
   .additional-information.active {
     transform: translate(-50%, -50%) scale(1);
+  }
+  .additional-information__handler {
+    padding: 0.4rem 0.6rem;
   }
   .kroki {
     left: 50%;
