@@ -562,7 +562,7 @@ input[type="number"] {
     max-width: 95%;
     top: 10%;
     left: 10%;
-    padding-top: 30%;
+    padding-top: 15%;
     padding-bottom: 10%;
     display: flex;
     justify-content: center;
@@ -643,7 +643,11 @@ input[type="number"] {
     }
   }
 }
-
+@media (max-width: 600px) {
+  .option-wrapper {
+    padding-top: 30%;
+  }
+}
 @media (min-height: 1200px) {
   .option-wrapper {
     top: 40%;

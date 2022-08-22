@@ -146,6 +146,7 @@ function formHandler() {
         case "korepetycje":
           formTitle.textContent = "KURS INDYWIDUALNY";
           formDescription.innerHTML = "";
+          formWorkTime.textContent = "";
           break;
         case "sam-na-sam":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY";
