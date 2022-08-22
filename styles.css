@@ -657,4 +657,9 @@ input[type=number] {
   .go-back {
     top: 70%;
   }
+}
+@media (min-height: 700px) and (max-height: 900px) {
+  .option-wrapper {
+    top: 60%;
+  }
 }/*# sourceMappingURL=styles.css.map */

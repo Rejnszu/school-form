@@ -145,6 +145,7 @@ function formHandler() {
       switch (option.dataset.form) {
         case "korepetycje":
           formTitle.textContent = "KURS INDYWIDUALNY";
+          formDescription.innerHTML = "";
           break;
         case "sam-na-sam":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY";
