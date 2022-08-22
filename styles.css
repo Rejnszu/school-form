@@ -622,7 +622,7 @@ input[type=number] {
     transform: translate(-50%, -50%) scale(1);
   }
   .additional-information__handler {
-    padding: 0.4rem 0.5rem;
+    padding: 0.4rem 0.55rem;
     right: -10px;
   }
   .kroki {
