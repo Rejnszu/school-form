@@ -149,26 +149,26 @@ function formHandler() {
         case "sam-na-sam":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY";
           formWorkTime.textContent = "60 minut / tydzień ";
-          formDescription.textContent =
-            "Praca domowa po każdych zajęciach Materiały podstawowe w cenie kursu Możliwość konsultacji między zajęciami. Dostęp do prywatnej grupy szkolnej";
+          formDescription.innerHTML =
+            "<ul><li>Praca domowa po każdych zajęciach</li> <li> Materiały podstawowe w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
           break;
         case "sam-na-sam-plus":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY PLUS";
           formWorkTime.textContent = "120 minut / tydzień ";
-          formDescription.textContent =
-            "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych. Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami. Dostęp do prywatnej grupy szkolnej.";
+          formDescription.innerHTML =
+            "<ul><li>Praca domowa po każdych zajęciach</li> <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
           break;
         case "kameralna-grupa":
           formTitle.textContent = "KURS GRUPOWY AMBITNY";
           formWorkTime.textContent = "90 minut / tydzień";
-          formDescription.textContent =
-            "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami. Dostęp do prywatnej grupy szkolnej";
+          formDescription.innerHTML =
+            "<ul><li>Praca domowa po każdych zajęciach <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
           break;
         case "samodzielnie-w-domu":
           formTitle.textContent = "KURS AMBITNY WYKŁADOWY";
           formWorkTime.textContent = "120 minut / tydzień";
-          formDescription.textContent =
-            "Praca domowa po każdych zajęciach. Dodatkowe prace domowe dla chętnych Materiały podstawowe i rozszerzone w cenie kursu. Możliwość konsultacji między zajęciami Dostęp do prywatnej grupy szkolnej.";
+          formDescription.innerHTML =
+            "<ul><li>Praca domowa po każdych zajęciach</li> <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
           break;
       }
     });

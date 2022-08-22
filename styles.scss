@@ -67,13 +67,14 @@ h2 {
   display: flex;
   align-items: center;
   transform: translateX(-50%);
-  padding: 0.3rem 1rem 0.1rem 1rem;
+  // padding: 5px 1rem 2px 1rem;
   border-radius: 40px;
 
   & i {
     font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
     color: white !important;
     margin-right: 0.5rem;
+    padding-top: 2px;
   }
 }
 .starting-page {
@@ -198,7 +199,7 @@ h2 {
 }
 .option-wrapper__form {
   justify-content: center;
-  top: 58%;
+  top: 63%;
 }
 .option {
   position: relative;
@@ -401,6 +402,29 @@ h2 {
       background-color: var(--main-color-darker);
     }
   }
+  & ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  & li {
+    position: relative;
+    padding: 0.3rem 0;
+    font-weight: 600;
+    &::before {
+      position: absolute;
+      content: "\f0da";
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: var(--main-color);
+
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+  }
 }
 .form__description {
   font-size: 1rem !important;
@@ -440,7 +464,7 @@ input[type="number"] {
 
 .go-back {
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   z-index: 130;
   transform: translateX(-50%);
@@ -589,9 +613,6 @@ input[type="number"] {
     padding: 3rem 1rem;
     width: 100%;
     height: auto;
-    & ul {
-      list-style: none;
-    }
   }
   .go-back {
     top: 60px;
@@ -627,13 +648,13 @@ input[type="number"] {
     top: 40%;
   }
   .option-wrapper__form {
-    top: 50%;
+    top: 55%;
   }
   .option-wrapper--two-options {
     top: 48%;
   }
   .go-back {
-    top: 70%;
+    top: 80%;
   }
 }
 @media (min-height: 1439px) {
@@ -641,10 +662,10 @@ input[type="number"] {
     top: 40%;
   }
   .option-wrapper__form {
-    top: 40%;
+    top: 45%;
   }
 
   .go-back {
-    top: 60%;
+    top: 70%;
   }
 }
