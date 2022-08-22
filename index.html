@@ -24,19 +24,20 @@
         </div>
     </div>
     <div class="courses-page">
-        <div class="h1-wrapper">
-            <h1>Wybierz Kurs</h1>
-        </div>
-        <section class="content">
+
+        <div class="content">
+            <div class="h1-wrapper">
+                <h1>Wybierz Kurs</h1>
+            </div>
 
 
-            <button class="go-back inactive">Poprzednia Strona</button>
-            <div class="kroki">Krok<span class="counter">1</span><span class="kroki__description">Jaki jest twój
+            <button class="go-back inactive"><i class="bi bi-arrow-left-short"></i> Poprzedni Krok</button>
+            <div class="kroki">Krok:<span class="counter">1</span><span class="kroki__description">Jaki jest twój
                     cel?</span></div>
             <!-- PIERWSZY WYBOR -->
             <div class="option-wrapper" data-site="courses">
                 <div data-choice="korepetycje-z-informatyki" class="option" data-previous="courses">
-                    <button class="additional-information__handler">Więcej informacji</button>
+                    <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Bieżąca pomoc w szkole lub na studiach.
                         Przygotowania do zaliczeń, konkursów, olimpiad.
                         Rozwijanie zainteresowań.</span>
@@ -45,10 +46,12 @@
                 </div>
 
                 <div data-choice="kurs-maturalny" data-previous="courses" class="option">
-                    <button class="additional-information__handler">Więcej informacji</button>
+                    <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Pełne przygotowanie do rozszerzonej matury z
                         informatyki.</span>
                     <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="badge">Najczęściej wybierany</span>
+                    <i class="fa-solid fa-people-group"></i>
                     <p>Kurs maturalny z informatyki rozszerzonej </p>
                 </div>
 
@@ -74,7 +77,7 @@
 
                 <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
                     data-previous="korepetycje-z-informatyki">
-                    <button class="additional-information__handler">Więcej informacji</button>
+                    <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Nauka wybranego języka programowania,
                         frameworku, technologii itp.
                         Rozwijanie zainteresowania informatyką.</span>
@@ -87,7 +90,7 @@
             <!-- PIERWSZE ROZWIDLENIE -->
             <div class="option-wrapper" data-site="kurs-maturalny">
                 <div class="option" data-choice="kurs-ambitny" data-form="sam-na-sam" data-previous="kurs-maturalny">
-                    <button class="additional-information__handler">Więcej informacji</button>
+                    <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Regularne zajęcia na żywo sam na sam z
                         korepetytorem o ustalonej porze.</span>
                     <i class="fa-solid fa-people-arrows"></i>
@@ -95,7 +98,7 @@
                 </div>
                 <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa"
                     data-previous="kurs-maturalny">
-                    <button class="additional-information__handler">Więcej informacji</button>
+                    <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Zajęcia na żywo w kameralnej grupie (3-4
                         osobowej). Wzajemna motywacja i wsparcie
                         przez cały okres trwania kursu.</span>
@@ -105,11 +108,11 @@
                 </div>
                 <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu"
                     data-previous="kurs-maturalny">
-                    <button class="additional-information__handler">Więcej informacji</button>
+                    <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Świetna forma kursu dla osób, które lubią przyswajać
                         wiedzę w swoim tempie, o dowolnej porze. Zajęcia w
                         większych grupach, nacisk na prace samodzielną w domu.</span>
-                    <span class="badge">Nowość!</span>
+                    <!-- <span class="badge">Nowość!</span> -->
                     <i class="fa-solid fa-person"></i>
                     <p>Wolę pracować samodzielnie w domu</p>
                 </div>
@@ -166,11 +169,11 @@
                     <textarea id="textarea" rows="5" cols="10"></textarea>
                     <p>Zostaw numer oddzownimy z ofertą!</p>
                     <label for="name">Imie i Nazwisko</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" required>
                     <label for="mail">Mail</label>
-                    <input type="email" id="mail">
+                    <input type="email" id="mail" required>
                     <label for="number">Numer telefonu</label>
-                    <input type="number" id="number">
+                    <input type="number" id="number" required>
                     <div class="rodo"><input type="checkbox" required>
                         <p>Zaakceptuj <a href="" target="_blank">RODO</a></p>
                     </div>
@@ -187,18 +190,18 @@
                     <p class="form__description"></p>
                     <p>Zostaw numer oddzownimy z ofertą!</p>
                     <label for="name">Imie i Nazwisko</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" required>
                     <label for="mail">Mail</label>
-                    <input type="email" id="mail">
+                    <input type="email" id="mail" required>
                     <label for="number">Numer telefonu</label>
-                    <input type="number" id="number">
+                    <input type="number" id="number" required>
                     <div class="rodo"><input type="checkbox" required>
                         <p>Zaakceptuj <a href="" target="_blank">RODO</a></p>
                     </div>
                     <button type="submit">Wyślij</button>
                 </form>
             </div>
-        </section>
+        </div>
     </div>
 
 </body>
