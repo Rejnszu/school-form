@@ -59,6 +59,22 @@ h2 {
     background-color: var(--main-color-darker);
   }
 }
+.button--choose {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
+  padding: 0.3rem 0.9rem 0.1rem 0.2rem;
+  border-radius: 40px;
+
+  & i {
+    font-size: clamp(1rem, 3vw, 2.5rem) !important;
+    color: white !important;
+    margin-right: 0.5rem;
+  }
+}
 .starting-page {
   position: relative;
   width: 100%;
@@ -177,7 +193,7 @@ h2 {
 .option-wrapper--two-options {
   top: 55%;
   justify-content: space-around;
-  padding: 0 6rem;
+  padding: 0 7rem;
 }
 .option-wrapper__form {
   justify-content: center;
@@ -427,7 +443,7 @@ input[type="number"] {
   z-index: 130;
   transform: translateX(-50%);
   margin-top: 1rem;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
 
   display: flex;
   align-items: center;
@@ -474,6 +490,11 @@ input[type="number"] {
     font-size: clamp(1.2rem, 3vw, 2.5rem);
   }
 }
+@media (min-width: 1980px) {
+  .option-wrapper--two-options {
+    padding: 0 20rem;
+  }
+}
 @media (max-width: 1550px) {
   .option {
     width: 22rem;
@@ -506,13 +527,16 @@ input[type="number"] {
   .content {
     overflow-x: hidden;
   }
+  .button--choose {
+    bottom: 15px;
+  }
   .option-wrapper {
     position: absolute;
     width: 80%;
     max-width: 95%;
     top: 10%;
     left: 10%;
-    padding-top: 25%;
+    padding-top: 30%;
     padding-bottom: 10%;
     display: flex;
     justify-content: center;
@@ -584,8 +608,6 @@ input[type="number"] {
       transform: translate(-50%, -50%) scale(1);
     }
   }
-  .additional-information__handler {
-  }
 
   .kroki {
     left: 50%;
@@ -596,6 +618,29 @@ input[type="number"] {
   }
 }
 
-// @media (min-height:1440px){
-//   .option-wrapper
-// }
+@media (min-height: 1200px) {
+  .option-wrapper {
+    top: 40%;
+  }
+  .option-wrapper__form {
+    top: 50%;
+  }
+  .option-wrapper--two-options {
+    top: 48%;
+  }
+  .go-back {
+    top: 70%;
+  }
+}
+@media (min-height: 1439px) {
+  .option-wrapper {
+    top: 40%;
+  }
+  .option-wrapper__form {
+    top: 40%;
+  }
+
+  .go-back {
+    top: 60%;
+  }
+}
