@@ -59,7 +59,7 @@ h2 {
   color: white;
   opacity: 1;
   margin: auto auto 0 auto;
-  box-shadow: 0 3px 3px black;
+  box-shadow: 0 2px 3px black;
   background-color: var(--main-color);
 }
 .button:hover {
@@ -536,18 +536,44 @@ input[type=number] {
     width: 25rem;
   }
 }
-@media (max-width: 1366px) {
+@media only screen and (min-width: 1180px) and (max-width: 1366px) {
   .option {
     width: 19rem;
   }
+  .form {
+    gap: 0.2rem;
+  }
+  .form input {
+    padding: 5px;
+  }
   .option--enhanced {
     width: 25rem;
+    height: 25rem;
+    padding: 3rem 1rem 0 1rem;
+  }
+  .option--enhanced p {
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+  }
+  .option--enhanced hr {
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .option--enhanced li {
+    padding: 0.3rem 0;
+  }
+  .option--enhanced button {
+    margin-bottom: 1rem;
+  }
+  .kroki {
+    margin-top: 15px;
   }
   .option-wrapper {
-    top: 53%;
+    top: 58%;
   }
   .option-wrapper__form {
-    top: 60%;
+    top: 63%;
   }
 }
 @media (max-width: 1180px) {
