@@ -166,7 +166,7 @@ h2 {
   position: absolute;
   width: 90%;
   max-width: 95%;
-  top: 50%;
+  top: 52%;
   left: 50%;
   display: flex;
   justify-content: space-between;
@@ -433,7 +433,7 @@ h2 {
 .form__time {
   font-size: 1rem !important;
   font-weight: 600 !important;
-  margin: 0.5rem 0;
+  // margin: 0.5rem 0;
   align-self: center;
 }
 .rodo {
@@ -469,7 +469,7 @@ input[type="number"] {
   z-index: 130;
   transform: translateX(-50%);
   margin-top: 1rem;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
 
   display: flex;
   align-items: center;
@@ -521,7 +521,7 @@ input[type="number"] {
     padding: 0 20rem;
   }
 }
-@media (max-width: 1550px) {
+@media (max-width: 1610px) {
   .option {
     width: 22rem;
     min-height: 25rem;
@@ -532,8 +532,11 @@ input[type="number"] {
   }
   .option-wrapper__form {
     &.fade-in {
-      transform: translate(-50%, -55%);
+      transform: translate(-50%, -60%);
     }
+  }
+  .kroki {
+    margin-top: 30px;
   }
   .option--enhanced {
     padding: 3rem 1rem;
@@ -541,15 +544,21 @@ input[type="number"] {
   }
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   .option {
     width: 19rem;
   }
   .option--enhanced {
     width: 25rem;
   }
+  .option-wrapper {
+    top: 53%;
+  }
+  .option-wrapper__form {
+    top: 60%;
+  }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .content {
     overflow-x: hidden;
   }
