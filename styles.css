@@ -50,7 +50,7 @@ h2 {
 
 .button {
   position: relative;
-  font-size: clamp(0.6rem, 3vw, 1.3rem);
+  font-size: clamp(0.6rem, 1vw, 2rem);
   padding: 0.3rem 0.8rem;
   border-radius: 56px;
   transition: all 0.5s;
@@ -89,7 +89,7 @@ h2 {
   border-radius: 56px;
 }
 .button--choose i {
-  font-size: clamp(1.2rem, 3vw, 2rem) !important;
+  font-size: clamp(1.2rem, 1.5vw, 3rem) !important;
   color: white !important;
   margin-right: 0.5rem;
   padding-top: 2px;
@@ -212,8 +212,8 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 25rem;
-  min-height: 25rem;
+  width: clamp(25rem, 20vw, 35rem);
+  min-height: clamp(25rem, 20vw, 35rem);
   transition: all 0.5s;
   padding: 2.5rem 2rem;
   font-weight: 500;
@@ -226,7 +226,7 @@ h2 {
   opacity: 0;
 }
 .option i {
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(3rem, 3.5vw, 5rem);
   align-self: center;
   color: var(--main-color);
 }
