@@ -55,7 +55,7 @@ h2 {
   color: white;
   opacity: 1;
   margin: auto auto 0 auto;
-
+  box-shadow: 0 3px 3px black;
   background-color: var(--main-color);
   &:hover {
     background-color: var(--main-color-darker);
@@ -149,9 +149,7 @@ h2 {
 
     transition: all 0.5s;
     margin: auto auto auto 0;
-    border: none;
-    cursor: pointer;
-    color: white;
+
     &:hover {
       background-color: var(--main-color-darker);
     }
@@ -405,10 +403,6 @@ h2 {
     margin: 0.5rem 0 0 0;
     font-size: clamp(1rem, 5vw, 1.5rem);
     padding: 0.5rem 1rem;
-
-    border: none;
-    cursor: pointer;
-    color: white;
   }
   & ul {
     list-style: none;
