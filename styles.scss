@@ -45,19 +45,33 @@ h2 {
   font-size: clamp(0.7rem, 5vw, 1.5rem);
 }
 .button {
+  position: relative;
   font-size: clamp(0.6rem, 3vw, 1.3rem);
   padding: 0.3rem 0.8rem;
-  border-radius: 10px;
+  border-radius: 56px;
   transition: all 0.5s;
   border: none;
   cursor: pointer;
   color: white;
   opacity: 1;
   margin: auto auto 0 auto;
-  box-shadow: 0 2px 3px black;
+
   background-color: var(--main-color);
   &:hover {
     background-color: var(--main-color-darker);
+  }
+  &::before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 92%;
   }
 }
 .button--choose {
@@ -68,8 +82,7 @@ h2 {
   align-items: center;
   transform: translateX(-50%);
   // padding: 5px 1rem 2px 1rem;
-  border-radius: 40px;
-
+  border-radius: 56px;
   & i {
     font-size: clamp(1.2rem, 3vw, 2rem) !important;
     color: white !important;
@@ -133,7 +146,7 @@ h2 {
     background-color: var(--main-color);
     font-size: clamp(1rem, 3vw, 1.5rem);
     padding: 0.3rem 0.8rem;
-    border-radius: 10px;
+
     transition: all 0.5s;
     margin: auto auto auto 0;
     border: none;
@@ -389,18 +402,13 @@ h2 {
     }
   }
   & button {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0 0;
     font-size: clamp(1rem, 5vw, 1.5rem);
     padding: 0.5rem 1rem;
-    box-shadow: 0 2px 3px black;
-    border-radius: 10px;
+
     border: none;
     cursor: pointer;
     color: white;
-    background-color: var(--main-color);
-    &:hover {
-      background-color: var(--main-color-darker);
-    }
   }
   & ul {
     list-style: none;
