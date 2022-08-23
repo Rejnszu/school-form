@@ -384,6 +384,9 @@ h2 {
   }
   & label {
     font-weight: 900;
+    &.label--bigger {
+      font-size: 1.25rem;
+    }
   }
   & input,
   & textarea {
@@ -712,8 +715,3 @@ input[type="number"] {
     top: 70%;
   }
 }
-// @media (min-height: 700px) and (max-height: 900px) {
-//   .option-wrapper {
-//     top: 60%;
-//   }
-// }
