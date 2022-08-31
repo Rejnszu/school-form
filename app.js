@@ -2,6 +2,7 @@ const transition = document.querySelector(".transition");
 const optionWrappers = document.querySelectorAll(".option-wrapper");
 const options = document.querySelectorAll(".option");
 const formTitle = document.querySelector(".form__title");
+const formInputs = document.querySelectorAll(".form input");
 const formDescription = document.querySelector(".form__description");
 const formWorkTime = document.querySelector(".form__time");
 const backOffPage = document.querySelector(".go-back");
@@ -93,6 +94,7 @@ function checkIfReverseButtonIsDisplayed() {
 }
 
 backOffPage.addEventListener("click", () => {
+  formInputs.forEach((input) => (input.value = ""));
   backOffPage.setAttribute("disabled", true);
   additionalInformations.forEach((information) =>
     information.classList.remove("active")

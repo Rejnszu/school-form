@@ -13,8 +13,6 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  height: 110vh;
-  overflow: hidden;
 }
 
 .h1-wrapper {
@@ -98,7 +96,7 @@ h2 {
 .starting-page {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   transition: all 0.3s;
   background-image: url(./assets/back-2-min.jpg);
   background-position: center;
@@ -152,7 +150,7 @@ h2 {
 }
 
 .courses-page {
-  height: 100vh;
+  height: 950px;
   display: none;
   opacity: 0;
   transition: all 0.6s;
@@ -212,8 +210,8 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: clamp(25rem, 20vw, 35rem);
-  min-height: clamp(25rem, 20vw, 35rem);
+  width: clamp(25rem, 20vw, 32rem);
+  min-height: clamp(25rem, 20vw, 32rem);
   transition: all 0.5s;
   padding: 2.5rem 2rem;
   font-weight: 500;
@@ -539,46 +537,6 @@ input[type=number] {
     width: 25rem;
   }
 }
-@media only screen and (min-width: 1180px) and (max-width: 1366px) {
-  .option {
-    width: 19rem;
-  }
-  .form {
-    gap: 0.2rem;
-  }
-  .form input {
-    padding: 5px;
-  }
-  .option--enhanced {
-    width: 25rem;
-    height: 25rem;
-    padding: 3rem 1rem 0 1rem;
-  }
-  .option--enhanced p {
-    font-weight: 800;
-    margin-bottom: 0.8rem;
-    font-size: 1.25rem;
-  }
-  .option--enhanced hr {
-    margin-bottom: 10px;
-    margin-top: 5px;
-  }
-  .option--enhanced li {
-    padding: 0.3rem 0;
-  }
-  .option--enhanced button {
-    margin-bottom: 1rem;
-  }
-  .kroki {
-    margin-top: 15px;
-  }
-  .option-wrapper {
-    top: 58%;
-  }
-  .option-wrapper__form {
-    top: 63%;
-  }
-}
 @media (max-width: 1180px) {
   .content {
     overflow-x: hidden;
@@ -674,30 +632,5 @@ input[type=number] {
 @media (max-width: 600px) {
   .option-wrapper {
     padding-top: 30%;
-  }
-}
-@media (min-height: 1200px) {
-  .option-wrapper {
-    top: 40%;
-  }
-  .option-wrapper__form {
-    top: 55%;
-  }
-  .option-wrapper--two-options {
-    top: 48%;
-  }
-  .go-back {
-    top: 80%;
-  }
-}
-@media (min-height: 1439px) {
-  .option-wrapper {
-    top: 40%;
-  }
-  .option-wrapper__form {
-    top: 45%;
-  }
-  .go-back {
-    top: 70%;
   }
 }/*# sourceMappingURL=styles.css.map */
