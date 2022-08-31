@@ -177,7 +177,7 @@ h2 {
   position: absolute;
   width: 90%;
   max-width: 95%;
-  top: 52%;
+  top: 50%;
   left: 50%;
   display: flex;
   justify-content: space-between;
@@ -207,6 +207,9 @@ h2 {
   top: 58%;
   justify-content: space-around;
   padding: 0 7rem;
+}
+.option-wrapper--two-options--higher {
+  top: 50%;
 }
 .option-wrapper__form {
   justify-content: center;
@@ -591,7 +594,7 @@ input[type="number"] {
 //   }
 // }
 @media (max-width: 1180px) {
-  .content {
+  body {
     overflow-x: hidden;
   }
   .button--choose {
