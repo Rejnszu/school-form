@@ -545,12 +545,9 @@ input[type=number] {
   }
 }
 @media (max-width: 1180px) {
-  .overflow-hidden {
-    position: relative;
-    overflow-x: hidden;
-  }
   .courses-page {
-    margin-bottom: 300px;
+    overflow: hidden;
+    height: 1400px;
   }
   .button--choose {
     bottom: 15px;

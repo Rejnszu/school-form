@@ -13,239 +13,237 @@
 </head>
 
 <body>
-    <div class="overflow-hidden">
-        <div class="starting-page">
-            <div class="starting-page__inner-wrapper">
 
-                <h3>Witamy w naszym konfiguratorze kursów!</h3>
-                <p>Moduł do którego zaraz przejdziesz pozwoli ci w łatwy i przejrzysty sposób określić twoje wymagania
-                    wobec
-                    ścieżki edukacji którą chcesz obrać.(generalnie nie wiem czy sam mam wymyslać czy ktoś ma jakiś
-                    pomysł?)
-                </p>
-                <button class="button start-selecting-courses">Przejdź do konfiguratora</button>
-            </div>
+    <div class="starting-page">
+        <div class="starting-page__inner-wrapper">
+
+            <h3>Witamy w naszym konfiguratorze kursów!</h3>
+            <p>Moduł do którego zaraz przejdziesz pozwoli ci w łatwy i przejrzysty sposób określić twoje wymagania
+                wobec
+                ścieżki edukacji którą chcesz obrać.(generalnie nie wiem czy sam mam wymyslać czy ktoś ma jakiś
+                pomysł?)
+            </p>
+            <button class="button start-selecting-courses">Przejdź do konfiguratora</button>
         </div>
-        <div class="courses-page">
+    </div>
+    <div class="courses-page">
 
-            <div class="content">
-                <div class="h1-wrapper">
-                    <h1>Wybierz Kurs</h1>
+        <div class="content">
+            <div class="h1-wrapper">
+                <h1>Wybierz Kurs</h1>
+            </div>
+
+
+            <button class="go-back inactive"><i class="bi bi-arrow-left-short"></i>
+                <p style="margin-bottom:6px">Poprzedni Krok</p>
+            </button>
+            <div class="kroki">Krok:<span class="counter">1</span><span class="kroki__description">Jaki jest twój
+                    cel?</span></div>
+            <!-- PIERWSZY WYBOR -->
+            <div class="option-wrapper" data-site="courses">
+                <div data-choice="korepetycje-z-informatyki" class="option" data-previous="courses">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <span class="additional-information">Bieżąca pomoc w szkole lub na studiach.
+                        Przygotowania do zaliczeń, konkursów, olimpiad.
+                        Rozwijanie zainteresowań.</span>
+                    <i class="bi bi-pc-display-horizontal"></i>
+                    <p>Korepetycje z informatyki i programowania</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
                 </div>
 
-
-                <button class="go-back inactive"><i class="bi bi-arrow-left-short"></i>
-                    <p style="margin-bottom:6px">Poprzedni Krok</p>
-                </button>
-                <div class="kroki">Krok:<span class="counter">1</span><span class="kroki__description">Jaki jest twój
-                        cel?</span></div>
-                <!-- PIERWSZY WYBOR -->
-                <div class="option-wrapper" data-site="courses">
-                    <div data-choice="korepetycje-z-informatyki" class="option" data-previous="courses">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <span class="additional-information">Bieżąca pomoc w szkole lub na studiach.
-                            Przygotowania do zaliczeń, konkursów, olimpiad.
-                            Rozwijanie zainteresowań.</span>
-                        <i class="bi bi-pc-display-horizontal"></i>
-                        <p>Korepetycje z informatyki i programowania</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-
-                    <div data-choice="kurs-maturalny" data-previous="courses" class="option">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <span class="additional-information">Pełne przygotowanie do rozszerzonej matury z
-                            informatyki.</span>
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span class="badge">Najczęściej wybierany</span>
-                        <i class="fa-solid fa-people-group"></i>
-                        <p>Kurs maturalny z informatyki rozszerzonej </p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-
-                    <div data-choice="textarea-formularz" data-previous="courses" class="option">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <i class="fa-solid fa-bookmark"></i>
-                        <p>Inne</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
+                <div data-choice="kurs-maturalny" data-previous="courses" class="option">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <span class="additional-information">Pełne przygotowanie do rozszerzonej matury z
+                        informatyki.</span>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="badge">Najczęściej wybierany</span>
+                    <i class="fa-solid fa-people-group"></i>
+                    <p>Kurs maturalny z informatyki rozszerzonej </p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
                 </div>
 
-                <!-- SCIEZKA LEWA -->
-                <div class="option-wrapper" data-site="korepetycje-z-informatyki">
-                    <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
-                        data-previous="korepetycje-z-informatyki">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <i class="fa-solid fa-hand-holding-hand"></i>
-                        <p>Potrzebuję pomocy z bieżącymi zadaniami ze szkoły/uczelni</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-
-                    <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
-                        data-previous="korepetycje-z-informatyki">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <i class="fa-brands fa-leanpub"></i>
-                        <p>Przygotowanie do egzaminu, konkursu lub olimpiady</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-
-                    <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
-                        data-previous="korepetycje-z-informatyki">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <span class="additional-information">Nauka wybranego języka programowania,
-                            frameworku, technologii itp.
-                            Rozwijanie zainteresowania informatyką.</span>
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                        <p>Rozwijanie zainteresowania związanego z informatyką i programowaniem</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-                </div>
-
-                <!-- SCIEZKA ŚRODKOWA -->
-                <!-- PIERWSZE ROZWIDLENIE -->
-                <div class="option-wrapper" data-site="kurs-maturalny">
-                    <div class="option" data-choice="kurs-ambitny" data-form="sam-na-sam"
-                        data-previous="kurs-maturalny">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <span class="additional-information">Regularne zajęcia na żywo sam na sam z
-                            korepetytorem o ustalonej porze.</span>
-                        <i class="fa-solid fa-people-arrows"></i>
-                        <p>Wolę pracować sam na sam z korepetytorem</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-                    <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa"
-                        data-previous="kurs-maturalny">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <span class="additional-information">Zajęcia na żywo w kameralnej grupie (3-4
-                            osobowej). Wzajemna motywacja i wsparcie
-                            przez cały okres trwania kursu.</span>
-                        <span class="badge">Najczęściej wybierany</span>
-                        <i class="fa-solid fa-people-group"></i>
-                        <p>Wolę pracować w kameralnej grupie</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-                    <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu"
-                        data-previous="kurs-maturalny">
-                        <i class="bi bi-question-lg additional-information__handler"></i>
-                        <span class="additional-information">Świetna forma kursu dla osób, które lubią przyswajać
-                            wiedzę w swoim tempie, o dowolnej porze. Zajęcia w
-                            większych grupach, nacisk na prace samodzielną w domu.</span>
-                        <!-- <span class="badge">Nowość!</span> -->
-                        <i class="fa-solid fa-person"></i>
-                        <p>Wolę pracować samodzielnie w domu</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-                </div>
-                <!-- PIERWSZE ROZWIDLENIE ŚRODEK, KURS AMBITNY I AMBITNY PLUS -->
-                <div class="option-wrapper option-wrapper--two-options" data-site="kurs-ambitny">
-                    <div class="option option--enhanced" data-choice="zwykly-formularz" data-form="sam-na-sam"
-                        data-previous="kurs-ambitny">
-                        <i class="bi bi-layers-fill"></i>
-                        <p>Kurs Indywidualny Ambitny</p>
-                        <hr>
-                        <ul>
-                            <li>60 minut / tydzień</li>
-                            <li>Praca domowa po każdych zajęciach</li>
-                            <li>Materiały podstawowe w cenie kursu</li>
-                            <li>Możliwość konsultacji między zajęciami</li>
-                            <li>Dostęp do prywatnej grupy szkolnej</li>
-                        </ul>
-                        <button type="button" class="button"> Przekonaj się sam</button>
-                    </div>
-                    <div class="option option--enhanced" data-choice="zwykly-formularz" data-form="sam-na-sam-plus"
-                        data-previous="kurs-ambitny">
-                        <i class="bi bi-stack"></i>
-                        <p>Kurs Indywidualny Ambitny Plus</p>
-                        <hr>
-                        <ul>
-                            <li>120 minut / tydzień</li>
-                            <li>Praca domowa po każdych zajęciach</li>
-                            <li>Materiały podstawowe i rozszerzone w cenie kursu</li>
-                            <li>Możliwość konsultacji między zajęciami</li>
-                            <li>Dostęp do prywatnej grupy szkolnej</li>
-                            <li>Dodatkowe prace domowe dla chętnych</li>
-                        </ul>
-                        <button type="button" class="button">Przekonaj się sam</button>
-
-                    </div>
-                </div>
-                <!-- DRUGIE ROZWIDLENIE  ŚRODEK-->
-                <div class="option-wrapper option-wrapper--two-options option-wrapper--two-options--higher"
-                    data-site="mature-zdaje">
-                    <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
-                        <i class="bi bi-calendar-minus"></i>
-                        <p>Maturę zdaję w roku 2023</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-                    <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
-                        <i class="bi bi-calendar-plus"></i>
-                        <p>Maturę zdaję w roku 2024 lub później</p>
-                        <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
-                            Wybierz
-                        </button>
-                    </div>
-                </div>
-
-                <!-- FORMULARZE -->
-                <div class="option-wrapper option-wrapper__form" data-site="textarea-formularz">
-                    <form class="form">
-                        <label class="label--bigger" for="textarea">Opisz jakiego kursu szukasz?</label>
-                        <textarea required id="textarea" rows="5" cols="10"></textarea>
-                        <p>Zostaw numer oddzownimy z ofertą!</p>
-                        <label for="name">Imie i Nazwisko</label>
-                        <input type="text" id="name" required>
-                        <label for="mail">Mail</label>
-                        <input type="email" id="mail" required>
-                        <label for="number">Numer telefonu</label>
-                        <input type="number" id="number" required>
-                        <div class="rodo"><input type="checkbox" required>
-                            <p><a href="" target="_blank">Akceptuję politykę prywatności</a></p>
-                        </div>
-                        <button class="button" type="submit">Wyślij</button>
-                    </form>
-                </div>
-
-                <div class="option-wrapper option-wrapper__form" data-site="zwykly-formularz">
-                    <form class="form">
-                        <p>Sugerujemy:</p>
-                        <h2 class="form__title"></h2>
-                        <p class="form__time"></p>
-                        <p class="form__description"></p>
-                        <p>Zostaw numer oddzownimy z ofertą!</p>
-                        <label for="name">Imie i Nazwisko</label>
-                        <input type="text" id="name" required>
-                        <label for="mail">Mail</label>
-                        <input type="email" id="mail" required>
-                        <label for="number">Numer telefonu</label>
-                        <input type="number" id="number" required>
-                        <div class="rodo"><input type="checkbox" required>
-                            <p><a href="" target="_blank">Akceptuję politykę prywatności</a></p>
-                        </div>
-                        <button type="submit" class="button">Wyślij</button>
-                    </form>
+                <div data-choice="textarea-formularz" data-previous="courses" class="option">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <i class="fa-solid fa-bookmark"></i>
+                    <p>Inne</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
                 </div>
             </div>
 
+            <!-- SCIEZKA LEWA -->
+            <div class="option-wrapper" data-site="korepetycje-z-informatyki">
+                <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
+                    data-previous="korepetycje-z-informatyki">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <i class="fa-solid fa-hand-holding-hand"></i>
+                    <p>Potrzebuję pomocy z bieżącymi zadaniami ze szkoły/uczelni</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+
+                <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
+                    data-previous="korepetycje-z-informatyki">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <i class="fa-brands fa-leanpub"></i>
+                    <p>Przygotowanie do egzaminu, konkursu lub olimpiady</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+
+                <div class="option" data-choice="zwykly-formularz" data-form="korepetycje"
+                    data-previous="korepetycje-z-informatyki">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <span class="additional-information">Nauka wybranego języka programowania,
+                        frameworku, technologii itp.
+                        Rozwijanie zainteresowania informatyką.</span>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <p>Rozwijanie zainteresowania związanego z informatyką i programowaniem</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+            </div>
+
+            <!-- SCIEZKA ŚRODKOWA -->
+            <!-- PIERWSZE ROZWIDLENIE -->
+            <div class="option-wrapper" data-site="kurs-maturalny">
+                <div class="option" data-choice="kurs-ambitny" data-form="sam-na-sam" data-previous="kurs-maturalny">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <span class="additional-information">Regularne zajęcia na żywo sam na sam z
+                        korepetytorem o ustalonej porze.</span>
+                    <i class="fa-solid fa-people-arrows"></i>
+                    <p>Wolę pracować sam na sam z korepetytorem</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+                <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa"
+                    data-previous="kurs-maturalny">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <span class="additional-information">Zajęcia na żywo w kameralnej grupie (3-4
+                        osobowej). Wzajemna motywacja i wsparcie
+                        przez cały okres trwania kursu.</span>
+                    <span class="badge">Najczęściej wybierany</span>
+                    <i class="fa-solid fa-people-group"></i>
+                    <p>Wolę pracować w kameralnej grupie</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+                <div class="option" data-choice="zwykly-formularz" data-form="samodzielnie-w-domu"
+                    data-previous="kurs-maturalny">
+                    <i class="bi bi-question-lg additional-information__handler"></i>
+                    <span class="additional-information">Świetna forma kursu dla osób, które lubią przyswajać
+                        wiedzę w swoim tempie, o dowolnej porze. Zajęcia w
+                        większych grupach, nacisk na prace samodzielną w domu.</span>
+                    <!-- <span class="badge">Nowość!</span> -->
+                    <i class="fa-solid fa-person"></i>
+                    <p>Wolę pracować samodzielnie w domu</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+            </div>
+            <!-- PIERWSZE ROZWIDLENIE ŚRODEK, KURS AMBITNY I AMBITNY PLUS -->
+            <div class="option-wrapper option-wrapper--two-options" data-site="kurs-ambitny">
+                <div class="option option--enhanced" data-choice="zwykly-formularz" data-form="sam-na-sam"
+                    data-previous="kurs-ambitny">
+                    <i class="bi bi-layers-fill"></i>
+                    <p>Kurs Indywidualny Ambitny</p>
+                    <hr>
+                    <ul>
+                        <li>60 minut / tydzień</li>
+                        <li>Praca domowa po każdych zajęciach</li>
+                        <li>Materiały podstawowe w cenie kursu</li>
+                        <li>Możliwość konsultacji między zajęciami</li>
+                        <li>Dostęp do prywatnej grupy szkolnej</li>
+                    </ul>
+                    <button type="button" class="button"> Przekonaj się sam</button>
+                </div>
+                <div class="option option--enhanced" data-choice="zwykly-formularz" data-form="sam-na-sam-plus"
+                    data-previous="kurs-ambitny">
+                    <i class="bi bi-stack"></i>
+                    <p>Kurs Indywidualny Ambitny Plus</p>
+                    <hr>
+                    <ul>
+                        <li>120 minut / tydzień</li>
+                        <li>Praca domowa po każdych zajęciach</li>
+                        <li>Materiały podstawowe i rozszerzone w cenie kursu</li>
+                        <li>Możliwość konsultacji między zajęciami</li>
+                        <li>Dostęp do prywatnej grupy szkolnej</li>
+                        <li>Dodatkowe prace domowe dla chętnych</li>
+                    </ul>
+                    <button type="button" class="button">Przekonaj się sam</button>
+
+                </div>
+            </div>
+            <!-- DRUGIE ROZWIDLENIE  ŚRODEK-->
+            <div class="option-wrapper option-wrapper--two-options option-wrapper--two-options--higher"
+                data-site="mature-zdaje">
+                <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
+                    <i class="bi bi-calendar-minus"></i>
+                    <p>Maturę zdaję w roku 2023</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+                <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
+                    <i class="bi bi-calendar-plus"></i>
+                    <p>Maturę zdaję w roku 2024 lub później</p>
+                    <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
+                        Wybierz
+                    </button>
+                </div>
+            </div>
+
+            <!-- FORMULARZE -->
+            <div class="option-wrapper option-wrapper__form" data-site="textarea-formularz">
+                <form class="form">
+                    <label class="label--bigger" for="textarea">Opisz jakiego kursu szukasz?</label>
+                    <textarea required id="textarea" rows="5" cols="10"></textarea>
+                    <p>Zostaw numer oddzownimy z ofertą!</p>
+                    <label for="name">Imie i Nazwisko</label>
+                    <input type="text" id="name" required>
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" required>
+                    <label for="number">Numer telefonu</label>
+                    <input type="number" id="number" required>
+                    <div class="rodo"><input type="checkbox" required>
+                        <p><a href="" target="_blank">Akceptuję politykę prywatności</a></p>
+                    </div>
+                    <button class="button" type="submit">Wyślij</button>
+                </form>
+            </div>
+
+            <div class="option-wrapper option-wrapper__form" data-site="zwykly-formularz">
+                <form class="form">
+                    <p>Sugerujemy:</p>
+                    <h2 class="form__title"></h2>
+                    <p class="form__time"></p>
+                    <p class="form__description"></p>
+                    <p>Zostaw numer oddzownimy z ofertą!</p>
+                    <label for="name">Imie i Nazwisko</label>
+                    <input type="text" id="name" required>
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" required>
+                    <label for="number">Numer telefonu</label>
+                    <input type="number" id="number" required>
+                    <div class="rodo"><input type="checkbox" required>
+                        <p><a href="" target="_blank">Akceptuję politykę prywatności</a></p>
+                    </div>
+                    <button type="submit" class="button">Wyślij</button>
+                </form>
+            </div>
         </div>
+
     </div>
 </body>
 
