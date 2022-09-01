@@ -314,7 +314,7 @@ h2 {
   z-index: 300;
   transform: translateX(-50%);
   font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
-  padding: 0.4rem 0.6rem;
+  padding: 0.1rem 0.6rem;
   border-radius: 50%;
   transition: all 0.5s;
   border: none;
@@ -481,6 +481,9 @@ input[type=number] {
   opacity: 1;
   background-color: white;
 }
+.go-back p {
+  margin-top: 6px;
+}
 .go-back.inactive {
   opacity: 0;
   pointer-events: none;
@@ -542,8 +545,12 @@ input[type=number] {
   }
 }
 @media (max-width: 1180px) {
-  body {
+  .overflow-hidden {
+    position: relative;
     overflow-x: hidden;
+  }
+  .courses-page {
+    margin-bottom: 300px;
   }
   .button--choose {
     bottom: 15px;
@@ -606,7 +613,7 @@ input[type=number] {
     height: auto;
   }
   .go-back {
-    top: 60px;
+    top: 70px;
   }
   .additional-information {
     top: 50%;
