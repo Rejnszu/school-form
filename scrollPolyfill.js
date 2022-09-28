@@ -1,4 +1,4 @@
-function polyfill() {
+export default function polyfill() {
   // aliases
   var w = window;
   var d = document;
@@ -423,12 +423,4 @@ function polyfill() {
       });
     }
   };
-}
-
-if (typeof exports === "object" && typeof module !== "undefined") {
-  // commonjs
-  module.exports = { polyfill: polyfill };
-} else {
-  // global
-  polyfill();
 }

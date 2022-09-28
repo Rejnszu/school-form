@@ -1,7 +1,7 @@
-import smoothscroll from "./scrollPolyfill";
+import polyfill from "./scrollPolyfill.js";
 
 // kick off the polyfill!
-smoothscroll.polyfill();
+polyfill();
 
 const transition = document.querySelector(".transition");
 const optionWrappers = document.querySelectorAll(".option-wrapper");
