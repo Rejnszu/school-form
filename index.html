@@ -59,7 +59,7 @@
                         informatyki.</span>
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span class="badge">Najczęściej wybierany</span>
-                    <i class="fa-solid fa-people-group"></i>
+
                     <p>Kurs maturalny z informatyki rozszerzonej </p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
@@ -82,7 +82,7 @@
                     data-previous="korepetycje-z-informatyki">
                     <i class="bi bi-question-lg additional-information__handler"></i>
                     <i class="fa-solid fa-hand-holding-hand"></i>
-                    <p>Potrzebuję pomocy z bieżącymi zadaniami ze szkoły/uczelni</p>
+                    <p class="course-description">Potrzebuję pomocy z bieżącymi zadaniami ze szkoły/uczelni</p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
                     </button>
@@ -92,7 +92,7 @@
                     data-previous="korepetycje-z-informatyki">
                     <i class="bi bi-question-lg additional-information__handler"></i>
                     <i class="fa-brands fa-leanpub"></i>
-                    <p>Przygotowanie do egzaminu, konkursu lub olimpiady</p>
+                    <p class="course-description">Przygotowanie do egzaminu, konkursu lub olimpiady</p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
                     </button>
@@ -105,7 +105,8 @@
                         frameworku, technologii itp.
                         Rozwijanie zainteresowania informatyką.</span>
                     <i class="fa-solid fa-arrow-trend-up"></i>
-                    <p>Rozwijanie zainteresowania związanego z informatyką i programowaniem</p>
+                    <p class="course-description">Rozwijanie zainteresowania związanego z informatyką i programowaniem
+                    </p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
                     </button>
@@ -120,12 +121,12 @@
                     <span class="additional-information">Regularne zajęcia na żywo sam na sam z
                         korepetytorem o ustalonej porze.</span>
                     <i class="fa-solid fa-people-arrows"></i>
-                    <p>Wolę pracować sam na sam z korepetytorem</p>
+                    <p class="course-description">Wolę pracować sam na sam z korepetytorem</p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
                     </button>
                 </div>
-                <div class="option" data-choice="mature-zdaje" data-form="kameralna-grupa"
+                <div class="option" data-choice="kurs-ambitny-grupowy" data-form="kameralna-grupa"
                     data-previous="kurs-maturalny">
                     <i class="bi bi-question-lg additional-information__handler"></i>
                     <span class="additional-information">Zajęcia na żywo w kameralnej grupie (3-4
@@ -133,7 +134,7 @@
                         przez cały okres trwania kursu.</span>
                     <span class="badge">Najczęściej wybierany</span>
                     <i class="fa-solid fa-people-group"></i>
-                    <p>Wolę pracować w kameralnej grupie</p>
+                    <p class="course-description">Wolę pracować w kameralnej grupie</p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
                     </button>
@@ -146,7 +147,7 @@
                         większych grupach, nacisk na prace samodzielną w domu.</span>
                     <!-- <span class="badge">Nowość!</span> -->
                     <i class="fa-solid fa-person"></i>
-                    <p>Wolę pracować samodzielnie w domu</p>
+                    <p class="course-description">Wolę pracować samodzielnie w domu</p>
                     <button type="button" class="button button--choose"><i class="bi bi-arrow-right-circle"></i>
                         Wybierz
                     </button>
@@ -185,8 +186,41 @@
 
                 </div>
             </div>
-            <!-- DRUGIE ROZWIDLENIE  ŚRODEK-->
-            <div class="option-wrapper option-wrapper--two-options option-wrapper--two-options--higher"
+            <!-- DRUGIE ROZWIDLENIE ŚRODEK KURS AMBITNY GRUPOWY I AMBITNY GRUPOWY PLUS-->
+            <div class="option-wrapper option-wrapper--two-options" data-site="kurs-ambitny-grupowy">
+                <div class="option option--enhanced" data-choice="zwykly-formularz" data-form="kurs-ambitny-grupowy"
+                    data-previous="kurs-ambitny-grupowy">
+                    <span class="badge">Najczęściej wybierany</span>
+                    <i class="bi bi-layers-fill"></i>
+                    <p>Kurs Grupowy Ambitny</p>
+                    <hr>
+                    <ul>
+                        <li>60 minut / tydzień</li>
+                        <li>Praca domowa po każdych zajęciach</li>
+                        <li>Materiały podstawowe w cenie kursu</li>
+                        <li>Możliwość konsultacji między zajęciami</li>
+                        <li>Dostęp do prywatnej grupy szkolnej</li>
+                    </ul>
+                    <button type="button" class="button"> Przekonaj się sam</button>
+                </div>
+                <div class="option option--enhanced" data-choice="zwykly-formularz"
+                    data-form="kurs-ambitny-grupowy-plus" data-previous="kurs-ambitny-grupowy">
+                    <i class="bi bi-stack"></i>
+                    <p>Kurs Grupowy Ambitny Plus</p>
+                    <hr>
+                    <ul>
+                        <li>120 minut / tydzień</li>
+                        <li>Praca domowa po każdych zajęciach</li>
+                        <li>Materiały podstawowe i rozszerzone w cenie kursu</li>
+                        <li>Możliwość konsultacji między zajęciami</li>
+                        <li>Dostęp do prywatnej grupy szkolnej</li>
+                        <li>Dodatkowe prace domowe dla chętnych</li>
+                    </ul>
+                    <button type="button" class="button">Przekonaj się sam</button>
+
+                </div>
+            </div>
+            <!-- <div class="option-wrapper option-wrapper--two-options option-wrapper--two-options--higher"
                 data-site="mature-zdaje">
                 <div class="option" data-choice="zwykly-formularz" data-previous="mature-zdaje">
                     <i class="bi bi-calendar-minus"></i>
@@ -202,7 +236,7 @@
                         Wybierz
                     </button>
                 </div>
-            </div>
+            </div> -->
 
             <!-- FORMULARZE -->
             <div class="option-wrapper option-wrapper__form" data-site="textarea-formularz">
@@ -236,7 +270,11 @@
                     <input type="email" id="mail" required>
                     <label for="number">Numer telefonu</label>
                     <input type="number" id="number" required>
-                    <div class="rodo"><input type="checkbox" required>
+                    <input type="text" id="choosen-course-information-input" value="Informacje o wybranym kursie"
+                        disabled>
+                    <input type="text" id="choosen-way-information-input" value="Informacje o wyborze ścieżki" disabled>
+                    <div class="rodo">
+                        <input type="checkbox" required>
                         <p><a href="" target="_blank">Akceptuję politykę prywatności</a></p>
                     </div>
                     <button type="submit" class="button">Wyślij</button>

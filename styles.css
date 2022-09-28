@@ -233,7 +233,7 @@ h2 {
   color: var(--main-color);
 }
 .option p {
-  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-size: clamp(1rem, 4vw, 1.5rem);
   margin-top: 1.5rem;
 }
 .option:hover {
@@ -423,6 +423,11 @@ h2 {
   font-weight: 900;
 }
 
+#choosen-course-information-input,
+#choosen-way-information-input {
+  display: none;
+}
+
 .form__description {
   font-size: 1rem !important;
   font-weight: 500 !important;
@@ -464,7 +469,7 @@ input[type=number] {
 
 .go-back {
   position: absolute;
-  top: 90%;
+  top: 70%;
   left: 50%;
   z-index: 130;
   transform: translateX(-50%);
@@ -526,7 +531,7 @@ input[type=number] {
 }
 @media (max-width: 1610px) {
   .option {
-    width: 22rem;
+    width: 19rem;
     min-height: 25rem;
     padding: 1rem 1rem 3rem 1rem;
   }
@@ -610,7 +615,10 @@ input[type=number] {
     height: auto;
   }
   .go-back {
-    top: 70px;
+    top: 90% !important;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: fixed;
   }
   .additional-information {
     top: 50%;
@@ -637,7 +645,7 @@ input[type=number] {
     margin: 0 0.4rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .option-wrapper {
     padding-top: 30%;
   }
