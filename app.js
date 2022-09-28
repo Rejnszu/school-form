@@ -1,6 +1,5 @@
 import polyfill from "./scrollPolyfill.js";
 
-// kick off the polyfill!
 polyfill();
 
 const transition = document.querySelector(".transition");
