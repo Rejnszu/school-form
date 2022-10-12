@@ -162,10 +162,11 @@ backOffPage.addEventListener("click", () => {
       currentStageDescriptionReverse();
       counter--;
       currentStage.textContent = counter;
-
-      setTimeout(() => {
-        coursesPage.scrollIntoView({ behavior: "smooth" });
-      }, 400);
+      if (window.innerWidth < 1200) {
+        setTimeout(() => {
+          coursesPage.scrollIntoView({ behavior: "smooth" });
+        }, 400);
+      }
     }, 1);
   }, 300);
 });
@@ -271,10 +272,11 @@ options.forEach((option) => {
         options.forEach((option) => option.classList.remove("move-out"));
         counter++;
         currentStage.textContent = counter;
-
-        setTimeout(() => {
-          coursesPage.scrollIntoView({ behavior: "smooth" });
-        }, 400);
+        if (window.innerWidth < 1200) {
+          setTimeout(() => {
+            coursesPage.scrollIntoView({ behavior: "smooth" });
+          }, 400);
+        }
       }, 500);
     }, 500);
   });
