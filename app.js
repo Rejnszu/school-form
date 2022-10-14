@@ -10,11 +10,11 @@ const coursesDiv = document.querySelector('[data-site="courses"]');
 const currentStage = document.querySelector(".counter");
 const coursesPage = document.querySelector(".courses-page");
 const startingPage = document.querySelector(".starting-page");
-const choosenCourseinformationInput = document.getElementById(
-  "choosen-course-information-input"
-);
 const choosenWayinformationInput = document.getElementById(
-  "choosen-way-information-input"
+  "wpforms-3174-field_6"
+);
+const choosenWayinformationInput2 = document.getElementById(
+  "wpforms-3171-field_8"
 );
 const startSelectingCourses = document.querySelector(
   ".start-selecting-courses"
@@ -38,7 +38,7 @@ function currentStageDescriptionHandler(option) {
       break;
     case "zwykly-formularz":
       currentStageDescription.textContent = "Skontaktuj się z nami.";
-      backOffPage.style.top = "90%";
+      backOffPage.style.top = "92%";
       break;
     case "textarea-formularz":
       currentStageDescription.textContent = "Opisz jakiego kursu szukasz.";
@@ -99,18 +99,18 @@ function currentStageDescriptionReverse() {
   }
 }
 
-startSelectingCourses.addEventListener("click", () => {
-  startingPage.classList.add("fade-out");
-  coursesPage.style.display = "block";
-  setTimeout(() => {
-    coursesPage.classList.add("fade-in");
-    Array.from(optionWrappers)
-      .find((wrapper) => wrapper.dataset.site === "courses")
-      .classList.add("fade-in");
-
-    startingPage.style.display = "none";
-  }, 300);
-});
+/* startSelectingCourses.addEventListener("click", () => {
+    startingPage.classList.add("fade-out");
+    coursesPage.style.display = "block";
+    setTimeout(() => {
+      coursesPage.classList.add("fade-in");
+      Array.from(optionWrappers)
+        .find((wrapper) => wrapper.dataset.site === "courses")
+        .classList.add("fade-in");
+  
+      startingPage.style.display = "none";
+    }, 300);
+  });*/
 
 function checkIfReverseButtonIsDisplayed() {
   if (coursesDiv.classList.contains("fade-in")) {
@@ -121,9 +121,22 @@ function checkIfReverseButtonIsDisplayed() {
 }
 
 backOffPage.addEventListener("click", () => {
-  formInputs.forEach((input) => (input.value = ""));
-  document.getElementById("wpforms-3174-field_4_1").checked = false;
-  document.getElementById("wpforms-3171-field_7_1").checked = false;
+  if (
+    document.getElementById("wpforms-3174-field_4_1") &&
+    document.getElementById("wpforms-3171-field_7_1")
+  ) {
+    document.getElementById("wpforms-3174-field_4_1").checked = false;
+    document.getElementById("wpforms-3171-field_7_1").checked = false;
+    document.getElementById("wpforms-3174-field_1").value = "";
+    document.getElementById("wpforms-3174-field_2").value = "";
+    document.getElementById("wpforms-3174-field_3").value = "";
+    document.getElementById("wpforms-3174-field_6").value = "";
+    document.getElementById("wpforms-3171-field_2").value = "";
+    document.getElementById("wpforms-3171-field_3").value = "";
+    document.getElementById("wpforms-3171-field_5").value = "";
+    document.getElementById("wpforms-3171-field_6").value = "";
+    document.getElementById("wpforms-3171-field_8").value = "";
+  }
   backOffPage.setAttribute("disabled", true);
   additionalInformations.forEach((information) =>
     information.classList.remove("active")
@@ -131,7 +144,7 @@ backOffPage.addEventListener("click", () => {
 
   Array.from(optionWrappers)
     .find((optionWrapper) => optionWrapper.classList.contains("fade-in"))
-    .classList.remove("fade-in");
+    ?.classList.remove("fade-in");
 
   setTimeout(() => {
     Array.from(optionWrappers)
@@ -157,12 +170,13 @@ backOffPage.addEventListener("click", () => {
     }
     setTimeout(() => {
       options.forEach((option) => option.classList.remove("move-out"));
-      backOffPage.removeAttribute("disabled");
+
       checkIfReverseButtonIsDisplayed();
       currentStageDescriptionReverse();
       counter--;
       currentStage.textContent = counter;
-      if (window.innerWidth < 1200) {
+      backOffPage.removeAttribute("disabled");
+      if (window.innerWidth < 1230) {
         setTimeout(() => {
           coursesPage.scrollIntoView({ behavior: "smooth" });
         }, 400);
@@ -174,6 +188,7 @@ backOffPage.addEventListener("click", () => {
 function formHandler() {
   options.forEach((option) => {
     option.addEventListener("click", (e) => {
+      let wartosc = "";
       if (
         e.target === option.querySelector(".additional-information__handler") ||
         e.target === option.querySelector(".additional-information")
@@ -186,58 +201,58 @@ function formHandler() {
           formTitle.textContent = "KURS INDYWIDUALNY";
           formDescription.innerHTML = "";
           formWorkTime.textContent = "";
-          choosenCourseinformationInput.value = "KURS INDYWIDUALNY";
-          choosenWayinformationInput.value = option.querySelector(
-            ".course-description"
-          ).textContent;
+          wartosc = "KURS INDYWIDUALNY ";
+          wartosc += option.querySelector(".course-description").textContent;
           break;
+        /*TEN FRAGMENT KODU ODPOWIADA ZA TO CO BĘDZIE WYŚWIETLONE W FORMULARZU PO USUNIĘCIU WYBORU KURSU ABMBITNEGO I AMBITNEGO PLUS, NALEŻY PODMIENIĆ TEKSTY W KAZDEJ LINIJCE NA DOWOLNE ZOSTAWIAJAC OPIS sam-na-sam*/
         case "sam-na-sam":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY";
           formWorkTime.textContent = "60 minut / tydzień ";
           formDescription.innerHTML =
             "<ul><li>Praca domowa po każdych zajęciach</li> <li> Materiały podstawowe w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
-          choosenCourseinformationInput.value = "KURS INDYWIDUALNY AMBITNY";
-          choosenWayinformationInput.value =
-            "Wolę pracować sam na sam z korepetytorem";
+          wartosc = "KURS INDYWIDUALNY AMBITNY ";
+          wartosc += "Wolę pracować sam na sam z korepetytorem";
           break;
         case "sam-na-sam-plus":
           formTitle.textContent = "KURS INDYWIDUALNY AMBITNY PLUS";
           formWorkTime.textContent = "120 minut / tydzień ";
           formDescription.innerHTML =
             "<ul><li>Praca domowa po każdych zajęciach</li> <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
-          choosenCourseinformationInput.value =
-            "KURS INDYWIDUALNY AMBITNY PLUS";
-          choosenWayinformationInput.value =
-            "Wolę pracować sam na sam z korepetytorem";
+          wartosc = "KURS INDYWIDUALNY AMBITNY PLUS ";
+          wartosc += "Wolę pracować sam na sam z korepetytorem";
           break;
         case "kurs-ambitny-grupowy":
           formTitle.textContent = "KURS GRUPOWY AMBITNY";
           formWorkTime.textContent = "90 minut / tydzień";
           formDescription.innerHTML =
             "<ul><li>Praca domowa po każdych zajęciach <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
-          choosenCourseinformationInput.value = "KURS GRUPOWY AMBITNY";
-          choosenWayinformationInput.value =
-            "Wole pracować w kameralnej grupie";
+          wartosc = "KURS GRUPOWY AMBITNY ";
+          wartosc += "Wole pracować w kameralnej grupie";
           break;
         case "kurs-ambitny-grupowy-plus":
           formTitle.textContent = "KURS GRUPOWY AMBITNY PLUS";
           formWorkTime.textContent = "90 minut / tydzień";
           formDescription.innerHTML =
             "<ul><li>Praca domowa po każdych zajęciach <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
-          choosenCourseinformationInput.value = "KURS GRUPOWY AMBITNY PLUS";
-          choosenWayinformationInput.value =
-            "Wole pracować w kameralnej grupie";
+          wartosc = "KURS GRUPOWY AMBITNY PLUS ";
+          wartosc += "Wole pracować w kameralnej grupie";
           break;
         case "samodzielnie-w-domu":
           formTitle.textContent = "KURS AMBITNY WYKŁADOWY";
           formWorkTime.textContent = "120 minut / tydzień";
           formDescription.innerHTML =
             "<ul><li>Praca domowa po każdych zajęciach</li> <li>Dodatkowe prace domowe dla chętnych</li> <li>Materiały podstawowe i rozszerzone w cenie kursu</li> <li>Możliwość konsultacji między zajęciami</li> <li>Dostęp do prywatnej grupy szkolnej</li></ul>";
-          choosenCourseinformationInput.value = "KURS AMBITNY WYKŁADOWY";
-          choosenWayinformationInput.value = option.querySelector(
-            ".course-description"
-          ).textContent;
+          wartosc = "KURS AMBITNY WYKŁADOWY ";
+          wartosc += option.querySelector(".course-description").textContent;
           break;
+      }
+      if (wartosc) {
+        if (choosenWayinformationInput2) {
+          choosenWayinformationInput2.value = wartosc;
+        }
+        if (choosenWayinformationInput) {
+          choosenWayinformationInput.value = wartosc;
+        }
       }
     });
   });
@@ -251,7 +266,7 @@ options.forEach((option) => {
     ) {
       return;
     }
-
+    backOffPage.setAttribute("disabled", true);
     formHandler();
     additionalInformations.forEach((information) =>
       information.classList.remove("active")
@@ -272,7 +287,8 @@ options.forEach((option) => {
         options.forEach((option) => option.classList.remove("move-out"));
         counter++;
         currentStage.textContent = counter;
-        if (window.innerWidth < 1200) {
+        backOffPage.removeAttribute("disabled");
+        if (window.innerWidth < 1230) {
           setTimeout(() => {
             coursesPage.scrollIntoView({ behavior: "smooth" });
           }, 400);
@@ -287,6 +303,32 @@ additionalInformationHandler.forEach((handler) => {
     handler.nextElementSibling.classList.toggle("active");
   });
 });
+
+let goBackObserverOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.4,
+};
+
+let goBackObserver = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (window.innerWidth < 1180) {
+      if (!entry.isIntersecting) {
+        backOffPage.classList.add("unobserve");
+      } else {
+        backOffPage.classList.remove("unobserve");
+      }
+    } else {
+      return;
+    }
+  });
+},
+goBackObserverOptions);
+
+goBackObserver.observe(coursesPage);
 
 // Objescie braku plynnego scrollowania na mobilce
 function polyfill() {

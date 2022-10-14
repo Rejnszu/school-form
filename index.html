@@ -38,7 +38,7 @@
             <div class="kroki">Krok <span class="counter">1</span>: <span class="kroki__description">Jaki jest twój
                     cel?</span></div>
             <!-- PIERWSZY WYBOR -->
-            <div class="option-wrapper" data-site="courses">
+            <div class="option-wrapper fade-in" data-site="courses">
                 <div data-choice="korepetycje-z-informatyki" class="option" data-previous="courses">
                     <i class="bi bi-question-lg tooltip additional-information__handler"><span
                             class="tooltiptext">Bieżąca pomoc w szkole lub na studiach. Przygotowania do zaliczeń,
@@ -115,6 +115,8 @@
             <!-- PIERWSZE ROZWIDLENIE -->
             <div class="option-wrapper" data-site="kurs-maturalny">
                 <div class="option" data-choice="kurs-ambitny" data-form="sam-na-sam" data-previous="kurs-maturalny">
+                    <!-- ŻEBY WYWALIC ROZWIDLENIE KURSU AMBITNEGO I AMBITNEGO PLUS NALEZY PODMIENIC LINIJKE POWYZEJ NA TA PONIZEJ CZYLI NAJLEPIEJ WYKOMENTOWAC-->
+                    <!-- <div class="option" data-choice="zwykly-formularz" data-form="sam-na-sam" data-previous="kurs-maturalny">-->
                     <i class="bi bi-question-lg tooltip additional-information__handler"><span
                             class="tooltiptext">Regularne zajęcia na żywo (on-line) sam na sam z korepetytorem o
                             ustalonej porze.</span></i>
@@ -248,15 +250,12 @@
                     <p class="form__time"></p>
                     <p class="form__description"></p>
                     [wpforms id="3174"]
-                    <input type="text" id="choosen-course-information-input" value="Informacje o wybranym kursie"
-                        disabled>
-                    <input type="text" id="choosen-way-information-input" value="Informacje o wyborze ścieżki" disabled>
+
                 </div>
             </div>
         </div>
 
     </div>
-
 </body>
 
 </html>

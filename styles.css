@@ -1,3 +1,11 @@
+#wpforms-3174-field_6-container {
+  display: none;
+}
+
+#wpforms-3171-field_8-container {
+  display: none;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -65,13 +73,13 @@ h1 {
   display: inline-block;
 }
 /*h1::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -15%;
-  height: 130%;
-  width: 6px;
-  background-color: var(--main-color);
+content: "";
+position: absolute;
+left: 0;
+top: -15%;
+height: 130%;
+width: 6px;
+background-color: var(--main-color);
 }*/
 
 h2 {
@@ -123,6 +131,7 @@ h2 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: none;
 }
 .starting-page::after {
   position: absolute;
@@ -177,8 +186,8 @@ h2 {
 
 .courses-page {
   height: 1100px;
-  display: none;
-  opacity: 0;
+  display: block;
+  opacity: 1;
   transition: all 0.6s;
 }
 .courses-page.fade-in {
@@ -382,7 +391,7 @@ h2 {
   top: 50%;
   right: -1px;
   width: 15px;
-  height: 30px;
+  height: 35px;
   transform: translateY(-50%);
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
   clip-path: polygon(100% 0, 0 50%, 100% 100%);
@@ -413,6 +422,7 @@ h2 {
 }
 .wpforms-container-full {
   max-width: 100% !important;
+  margin: 10px auto !important;
 }
 #wpforms-form-3171 {
   max-width: 100% !important;
@@ -457,17 +467,17 @@ h2 {
 }
 /* 
 .wpforms-submit::before {
-  background-color: initial!important;
-  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%)!important;
-  border-radius: 125px!important;
-  content: ""!important;
-  height: 50%!important;
-  left: 4%!important;
-  opacity: 0.5!important;
-  position: absolute!important;
-  top: 0!important;
-  transition: all 0.3s!important;
-  width: 92%!important;
+background-color: initial!important;
+background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%)!important;
+border-radius: 125px!important;
+content: ""!important;
+height: 50%!important;
+left: 4%!important;
+opacity: 0.5!important;
+position: absolute!important;
+top: 0!important;
+transition: all 0.3s!important;
+width: 92%!important;
 }*/
 .form button {
   margin: 0.5rem 0 0 0;
@@ -566,6 +576,9 @@ input[type="number"] {
   opacity: 0;
   pointer-events: none;
 }
+.go-back.unobserve {
+  display: none;
+}
 .go-back i {
   font-size: clamp(1.7rem, 3vw, 3.5rem);
 }
@@ -622,7 +635,7 @@ input[type="number"] {
     width: 25rem;
   }
 }
-@media (max-width: 1180px) {
+@media (max-width: 1230px) {
   .courses-page {
     overflow: hidden;
     height: 1400px;
