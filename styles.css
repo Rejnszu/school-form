@@ -1,44 +1,4 @@
-#wpforms-3174-field_6-container {
-  display: none;
-}
 
-#wpforms-3171-field_8-container {
-  display: none;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 250px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  border: 1px solid black;
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 120%;
-  left: 0;
-  margin-left: -100px;
-  font-size: 0.7em;
-  padding: 0.5rem;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-@media (max-width: 450px) {
-  .tooltip .tooltiptext {
-    left: -80%;
-    width: 200px;
-  }
-}
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap");
 * {
   scroll-behavior: smooth;
@@ -609,7 +569,47 @@ input[type="number"] {
   margin-left: 0.5rem;
   font-size: clamp(1.2rem, 3vw, 2.5rem);
 }
+#wpforms-3174-field_6-container {
+  display: none;
+}
 
+#wpforms-3171-field_8-container {
+  display: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid black;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 0;
+  margin-left: -100px;
+  font-size: 0.7em;
+  padding: 0.5rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+@media (max-width: 450px) {
+  .tooltip .tooltiptext {
+    left: -80%;
+    width: 200px;
+  }
+}
 @media (min-width: 1980px) {
   .option-wrapper--two-options {
     padding: 0 20rem;
